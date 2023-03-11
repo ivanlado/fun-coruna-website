@@ -41,20 +41,27 @@ body {
 .container_informacion {
     text-align: center;
     align-items: center;
-    padding: 2%;
+    /* padding: 2%; */
     padding-left: 10%;
     padding-right: 10%;
     display: grid;
     background-color: blanchedalmond;
     grid-template-columns: 1fr 1fr;
-    max-height: 40%;
+    height: 40%;
 }
 
 .container_texto {
     text-align: left;
 }
 
+.container_img{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
 .img {
+    display: block;
     max-width: 100%;
     max-height: 100%;
     text-align: center;
