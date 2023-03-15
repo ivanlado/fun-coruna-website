@@ -1,13 +1,23 @@
-@import "comun.css"
+/* @import "comun.css"; */
 
 
-h1, h2, h3, h4, p{
+h1,
+h2,
+h3,
+h4,
+p {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-body{
+body {
     color: var(--fondo);
+    background-color: var(--fondo);
+    background-color: #fff;
+    opacity: 1;
+    background-image: radial-gradient(#ECB561 0.7000000000000001px, transparent 0.7000000000000001px), radial-gradient(#ECB561 0.7000000000000001px, #fff 0.7000000000000001px);
+    background-size: 28px 28px;
+    background-position: 0 0, 14px 14px;
 }
 
 /* hero */
@@ -17,17 +27,17 @@ body{
     text-align: left;
     align-items: center;
     height: 50vh;
-    background-image: linear-gradient(to right top, rgba(27, 26, 26, 0.55),rgba(49, 49, 49, 0.55)), url('../workingmed.jpg');
+    background-image: linear-gradient(to right top, rgba(27, 26, 26, 0.55), rgba(49, 49, 49, 0.55)), url('../images/workingmed.jpg');
     background-size: cover;
     padding: 0 40% 0 10%;
     color: var(--fonfo);
 }
 
-.hero_description{
+.hero_description {
     padding-top: 1.25rem;
 }
 
-.btn_hero{
+.btn_hero {
     margin-top: 0.75rem;
     display: inline-block;
     justify-self: center;
@@ -40,7 +50,12 @@ body{
 
 /* features */
 
-.feature-tipo1{
+.feature {
+    padding: 1.5rem 0.75rem 1rem;
+}
+
+
+.feature-tipo1 {
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
@@ -50,23 +65,46 @@ body{
     height: 30vh;
 }
 
-.feature_info{
-    height: 100%;
-    width: 100%;
-    background-color: black;
+@media (max-width: 800px) {
+    .feature-tipo1{
+        grid-template-columns: 1fr;
+        grid-row-start: 2;
+    }
+    .feature_info{
+        order:2;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+    .image-tipo1{
+        order:1;
+    }
 }
 
-.container-img-tipo1{
-    max-height: 100%;
-    max-width: 100%;
-    background-color: gray;
+
+.feature_info {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--fuente-texto-oscura);
+    margin: 0 2rem 0;
+
 }
 
 
-.img-tipo1{
+.descripcion-feature {
+    padding-top: 0.75rem;
+}
+
+
+.image-tipo1 {
+    margin: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
+    border-radius: 1rem;
     /* max-width: 100%; */
 }
-

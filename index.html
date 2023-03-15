@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/comun.css">
+    <script src="./js/date.js"></script>
 </head>
 
 
@@ -51,12 +53,37 @@
         </section>
         <section class="barra_busqueda">
             <input type="text" placeholder="Search...">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <button type="submit"><i class="fa fa-search">Buscar</i></button>
             </div>
     </header>
 
 
     <main class="main container">
+        <div class="container_eventos">
+            <h2 class="tipo_eventos" id="current-date"> Eventos destacados</h2>
+            <p class="comentario_container_eventos">Estos son los eventos más destacados para los próximos días</p>
+            <div class="caja_eventos">
+                <article class="evento">
+                    <div class="container_imagen_evento">
+                        <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
+                    </div>
+                    <div class="container_text_evento">
+                        <h3 class="nombre_evento">Partido Deportivo de la Coruña vs. Badajoz C.F.</h3>
+                        <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
+                    </div>
+                </article>
+                <article class="evento">
+                    <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
+                    <h3 class="nombre_evento">Partido Deportivo de la Coruña vs. Badajoz C.F.</h3>
+                    <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
+                </article>
+                <article class="evento">
+                    <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
+                    <h3 class="nombre_evento">Partido Deportivo de la Coruña vs. Badajoz C.F.</h3>
+                    <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
+                </article>
+            </div>
+        </div>
         <div class="container_eventos">
             <h2 class="tipo_eventos"> Eventos destacados</h2>
             <p class="comentario_container_eventos">Estos son los eventos más destacados para los próximos días</p>
@@ -83,6 +110,8 @@
             </div>
         </div>
     </main>
+
+    
 </body>
 
 </html>
