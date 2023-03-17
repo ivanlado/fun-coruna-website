@@ -5,3 +5,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("current-date").textContent = formattedDateString;
 
 });
+

@@ -1,9 +1,9 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="eventos, social, deportivo, musical,  Coruña">
     <title>Fun Coruña</title>
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
@@ -43,7 +43,7 @@
                 <li class="nav_item">
                     <a href="#" class="nav_link">Crear evento</a>
                 </li>
-                
+
             </ul>
 
         </nav>
@@ -59,59 +59,140 @@
 
 
     <main class="main container">
-        <div class="container_eventos">
+
+        <div id="eventos-hoy" class="container_eventos">
             <h2 class="tipo_eventos" id="current-date"> Eventos destacados</h2>
             <p class="comentario_container_eventos">Estos son los eventos más destacados para los próximos días</p>
-            <div class="caja_eventos">
-                <article class="evento">
-                    <div class="container_imagen_evento">
+            <div class="container-caja-eventos">
+                <a class="prev" , onclick="contarClicks('eventos-hoy', -1)">
+                    <img src="./images/icons/bxs-chevron-left.svg" alt="">
+                </a>
+                <div class="caja_eventos">
+                    <article class="evento">
+                        <div class="container_imagen_evento">
+                            <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
+                        </div>
+                        <div class="container_text_evento">
+                            <h3 class="nombre_evento">1</h3>
+                            <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
+                        </div>
+                    </article>
+                    <article class="evento">
                         <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
-                    </div>
-                    <div class="container_text_evento">
-                        <h3 class="nombre_evento">Partido Deportivo de la Coruña vs. Badajoz C.F.</h3>
+                        <h3 class="nombre_evento">2</h3>
                         <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
-                    </div>
-                </article>
-                <article class="evento">
-                    <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
-                    <h3 class="nombre_evento">Partido Deportivo de la Coruña vs. Badajoz C.F.</h3>
-                    <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
-                </article>
-                <article class="evento">
-                    <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
-                    <h3 class="nombre_evento">Partido Deportivo de la Coruña vs. Badajoz C.F.</h3>
-                    <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
-                </article>
-            </div>
-        </div>
-        <div class="container_eventos">
-            <h2 class="tipo_eventos"> Eventos destacados</h2>
-            <p class="comentario_container_eventos">Estos son los eventos más destacados para los próximos días</p>
-            <div class="caja_eventos">
-                <article class="evento">
-                    <div class="container_imagen_evento">
+                    </article>
+                    <article class="evento">
                         <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
-                    </div>
-                    <div class="container_text_evento">
-                        <h3 class="nombre_evento">Partido Deportivo de la Coruña vs. Badajoz C.F.</h3>
+                        <h3 class="nombre_evento">3</h3>
                         <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
-                    </div>
-                </article>
-                <article class="evento">
-                    <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
-                    <h3 class="nombre_evento">Partido Deportivo de la Coruña vs. Badajoz C.F.</h3>
-                    <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
-                </article>
-                <article class="evento">
-                    <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
-                    <h3 class="nombre_evento">Partido Deportivo de la Coruña vs. Badajoz C.F.</h3>
-                    <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
-                </article>
-            </div>
-        </div>
-    </main>
+                    </article>
+                    <article class="evento">
+                        <div class="container_imagen_evento">
+                            <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
+                        </div>
+                        <div class="container_text_evento">
+                            <h3 class="nombre_evento">4</h3>
+                            <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
+                        </div>
+                    </article>
+                    <article class="evento">
+                        <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
+                        <h3 class="nombre_evento">5</h3>
+                        <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
+                    </article>
+                    <article class="evento">
+                        <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
+                        <h3 class="nombre_evento">6</h3>
+                        <p class="descripcion_evento"> Partido de Primera HREF del Deportivo con el Badajoz</p>
+                    </article>
+                </div>
+                <a class="next" , onclick="contarClicks('eventos-hoy', 1)">
+                    <img src="./images/icons/bxs-chevron-right.svg" alt="">
+                </a>
 
-    
+            </div>
+        </div>
+
+        
+
+        
+
+    </main>
+    <script>
+
+        let indicesActuales = new Map();
+        let eventosMap = new Map();
+        let nEventos = new Map();
+
+        function init() {
+            const containers = document.querySelectorAll(".container_eventos");
+            for (const container of containers) {
+                const eventos = container.querySelectorAll(".evento");
+                const id_container = container.id;
+                indicesActuales.set(id_container, 0);
+                eventosMap.set(id_container, eventos);
+                nEventos.set(id_container, eventos.length);
+                let i = 0;
+                for (const evento of eventos) {
+                    console.log(evento.style.display);
+                    i++;
+                    if (i <= 3) continue;
+                    evento.style.display = "none";
+                }
+            }
+        }
+        window.addEventListener('load', init);
+
+        function contarClicks(id, sentido) {
+            const index = indicesActuales.get(id);
+            const n = nEventos.get(id);
+            const eventos = eventosMap.get(id);
+            if(index+sentido<n-2 && index+sentido>-1){
+                indicesActuales.set(id, index + sentido);
+                if(sentido>0){
+                    eventos[index].style.display = "none";
+                    eventos[index+3].style.display = "block";
+                } else{
+                    eventos[index-1].style.display = "block";
+                    eventos[index+2].style.display = "none";
+                }
+                console.log(index);
+            }
+        }
+    </script>
+    <!-- <script>
+        let nConjuntos = document.getElementsByClassName("dot");
+
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script> -->
+
 </body>
 
 </html>

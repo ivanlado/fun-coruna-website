@@ -10,11 +10,12 @@ body {
 }
 
 :root {
-    --main-bg-color: brown;
-
     --fuente-texto: #ECE8E5;
     --fuente-texto-oscura: #384F5F;
     --bg-color: #fff;
+    --bg-color-oscuro: #3EA6A2;
+    --bg-color-oscuro-2: #494E56;
+    --bg-color-oscuro-2-claro: #ccd8e9;
 
 
     --azul-claro: #ECE8E5;

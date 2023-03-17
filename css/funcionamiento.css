@@ -50,33 +50,78 @@ body {
 
 /* features */
 
-.feature {
-    padding: 1.5rem 0.75rem 1rem;
+
+.container-features-tipo1 {
+    box-sizing: border-box;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .container-features-tipo1 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+@media (max-width: 512px) {
+    .container-features-tipo1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+    }
 }
 
 
-.feature-tipo1 {
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.75rem;
+    color: var(--fuente-texto-oscura);
+    background-color: var(--bg-color-oscuro-2-claro);
+    border-radius: 0.75rem;
+}
+
+.feature-tipo1 h2, .feature-tipo1 p{
+    color: var(--fuente-texto-oscura);
+}
+
+/* features tipo 2 */
+
+.feature-tipo2 {
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     align-items: center;
     margin: 0 auto;
-    height: 30vh;
+    padding: 1.5rem 0.75rem 1rem;
+    background-color: var(--bg-color-oscuro-2);
+
+    /* height: 30vh; */
 }
 
 @media (max-width: 800px) {
-    .feature-tipo1{
+    .feature-tipo2 {
         grid-template-columns: 1fr;
         grid-row-start: 2;
     }
-    .feature_info{
-        order:2;
+
+    .feature_info {
+        order: 2;
         padding-top: 2rem;
         padding-bottom: 4rem;
     }
-    .image-tipo1{
-        order:1;
+
+    .image-tipo1 {
+        order: 1;
     }
 }
 
@@ -87,16 +132,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--fuente-texto-oscura);
     margin: 0 2rem 0;
-
+    
 }
 
 
-.descripcion-feature {
+.feature-tipo2 p {
     padding-top: 0.75rem;
 }
 
+.feature-tipo2 h2, .feature-tipo2 p{
+    color: var(--fuente-texto);
+
+}
 
 .image-tipo1 {
     margin: auto;
