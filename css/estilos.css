@@ -218,7 +218,7 @@ body {
         opacity: 0;
         transform: translateX(-20px);
     }
-    
+
     100% {
         opacity: 1;
         transform: translateX(0px);
@@ -235,40 +235,38 @@ body {
     height: auto;
 }
 
-.container_text_evento{
+.container_text_evento {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1.25rem;
 }
 
-.nombre_evento{
+.nombre_evento {}
 
-}
-
-.fecha-evento{
+.fecha-evento {
     padding-top: 0.5rem;
     color: var(--naranja);
     font-weight: bolder;
 }
 
-.lugar-evento{
+.lugar-evento {
     padding-top: 0.4rem;
     font-size: smaller;
     color: var(--gris);
 }
 
-.container-precio{
+.container-precio {
     font-size: smaller;
 }
 
-.precio{
+.precio {
     font-size: large;
     font-weight: bolder;
 }
 
 
 
-.footer-evento{
+.footer-evento {
     display: flex;
     justify-content: space-between;
     padding-top: 1.75rem;
@@ -277,7 +275,7 @@ body {
 }
 
 
-.btn-reservar{
+.btn-reservar {
     border: none;
     background-color: var(--azul);
     color: white;
@@ -285,4 +283,107 @@ body {
     border-radius: 20px;
     margin-left: 10px;
     cursor: pointer;
+}
+
+
+/* modal */
+
+#form-reserva {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Modal Content */
+.container-reserva {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 1s;
+    animation-name: animatetop;
+    animation-duration: 1s;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        left: -100px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        left: -100px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-header {
+    /* border-radius: var(--event-radius) var(--event-radius) 0 0; */
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    background-color: #5cb85c;
+    color: white;
+    z-index: 1;
+}
+
+.form-body {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.form-footer {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    background-color: #5cb85c;
+    color: white;
 }

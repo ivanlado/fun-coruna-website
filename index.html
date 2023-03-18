@@ -78,7 +78,7 @@
                             <p class="lugar-evento"> Estadio de Abanca Riazor</p>
                             <div class="footer-evento">
                                 <p class="container-precio"> Desde <span class="precio">20€</span></p>
-                                <p class="btn-reservar"> Reservar</p>
+                                <p class="btn-reservar" onclick="reservar(this)"> Reservar</p>
                             </div>
                         </div>
                     </article>
@@ -92,67 +92,12 @@
                             <p class="lugar-evento"> Estadio de Abanca Riazor</p>
                             <div class="footer-evento">
                                 <p class="container-precio"> Desde <span class="precio">20€</span></p>
-                                <p class="btn-reservar"> Reservar</p>
+                                <p class="btn-reservar" onclick="reservar(this)"> Reservar</p>
                             </div>
                         </div>
                     </article>
-                    <article class="evento">
-                        <div class="container_imagen_evento">
-                            <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
-                        </div>
-                        <div class="container_text_evento">
-                            <h3 class="nombre_evento">Partido Deportivo vs. Badajoz</h3>
-                            <p class="fecha-evento"> sabado 1 abril, 21:00</p>
-                            <p class="lugar-evento"> Estadio de Abanca Riazor</p>
-                            <div class="footer-evento">
-                                <p class="container-precio"> Desde <span class="precio">20€</span></p>
-                                <p class="btn-reservar"> Reservar</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="evento">
-                        <div class="container_imagen_evento">
-                            <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
-                        </div>
-                        <div class="container_text_evento">
-                            <h3 class="nombre_evento">Partido Deportivo vs. Badajoz</h3>
-                            <p class="fecha-evento"> sabado 1 abril, 21:00</p>
-                            <p class="lugar-evento"> Estadio de Abanca Riazor</p>
-                            <div class="footer-evento">
-                                <p class="container-precio"> Desde <span class="precio">20€</span></p>
-                                <p class="btn-reservar"> Reservar</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="evento">
-                        <div class="container_imagen_evento">
-                            <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
-                        </div>
-                        <div class="container_text_evento">
-                            <h3 class="nombre_evento">Partido Deportivo vs. Badajoz</h3>
-                            <p class="fecha-evento"> sabado 1 abril, 21:00</p>
-                            <p class="lugar-evento"> Estadio de Abanca Riazor</p>
-                            <div class="footer-evento">
-                                <p class="container-precio"> Desde <span class="precio">20€</span></p>
-                                <p class="btn-reservar"> Reservar</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="evento">
-                        <div class="container_imagen_evento">
-                            <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
-                        </div>
-                        <div class="container_text_evento">
-                            <h3 class="nombre_evento">Partido Deportivo vs. Badajoz</h3>
-                            <p class="fecha-evento"> sabado 1 abril, 21:00</p>
-                            <p class="lugar-evento"> Estadio de Abanca Riazor</p>
-                            <div class="footer-evento">
-                                <p class="container-precio"> Desde <span class="precio">20€</span></p>
-                                <p class="btn-reservar"> Reservar</p>
-                            </div>
-                        </div>
-                    </article>
-                    
+
+
                 </div>
                 <a class="next" , onclick="contarClicks('eventos-hoy', 1)">
                     <img src="./images/icons/bxs-chevron-right.svg" alt="">
@@ -162,9 +107,58 @@
         </section>
 
 
+        <form id="form-reserva">
+            <div class="container-reserva">
+                <div class="form-header">
+                    <span class="close">&times;</span>
+                    <h2>Modal Header</h2>
+                </div>
+                <div class="form-body">
+                    <p>Some text in the Modal Body</p>
+                    <p>Some other text...</p>
+                </div>
+                <div class="form-footer">
+                    <h3>Modal Footer</h3>
+                </div>
+            </div>
+        </form>
 
+        <!-- <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the Modal Body</p>
+                    <p>Some other text...</p>
+                </div>
+                <div class="modal-footer">
+                    <h3>Modal Footer</h3>
+                </div>
+            </div>
+        </div> -->
 
+        <script>
+            let modal = document.getElementById("form-reserva");
 
+            let btnCerrar = document.getElementsByClassName("close")[0];
+
+            function reservar(btn) {
+                modal.style.display = "flex";
+                console.log("hola");
+            }
+
+            btnCerrar.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
     </main>
     <script>
 
