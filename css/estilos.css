@@ -2,7 +2,8 @@
 
 :root {
     --padding-container: 50px 10px;
-    --color-title: blue
+    --color-title: blue;
+    --event-radius: 0.8rem;
 }
 
 body {
@@ -133,7 +134,6 @@ body {
 
 /* Eventos */
 
-.main {}
 
 
 .container-caja-eventos {
@@ -156,7 +156,6 @@ body {
     justify-content: center;
     text-align: center;
     color: rgb(79 70 229);
-    /* background-color: #45a04981; */
     border-width: 1px;
     border: 2px solid;
     border-radius: 50%;
@@ -175,21 +174,20 @@ body {
     width: 94%;
 }
 
-.container_imagen_eventos {
-    border-radius: 0.75rem;
-}
 
 .evento {
     /* transition-duration: 300ms; */
-    padding: 0.75rem;
+    padding-bottom: 1.25rem;
+    border-radius: var(--event-radius);
     background-color: white;
-    border-radius: 0.75rem;
     box-sizing: border-box;
+    align-items: center;
     border-width: 0;
     border-style: solid;
     border-color: #e5e7eb;
     display: grid;
     grid-template-rows: 3fr 2fr;
+    aspect-ratio: 2;
 }
 
 .fade-left {
@@ -220,16 +218,71 @@ body {
         opacity: 0;
         transform: translateX(-20px);
     }
-
+    
     100% {
         opacity: 1;
         transform: translateX(0px);
     }
 }
 
+.container_imagen_eventos {
+    border-radius: 0.75rem;
+}
 
 .img {
     max-width: 100%;
-    border-radius: 4%;
+    border-radius: var(--event-radius) var(--event-radius) 0 0;
     height: auto;
+}
+
+.container_text_evento{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.25rem;
+}
+
+.nombre_evento{
+
+}
+
+.fecha-evento{
+    padding-top: 0.5rem;
+    color: var(--naranja);
+    font-weight: bolder;
+}
+
+.lugar-evento{
+    padding-top: 0.4rem;
+    font-size: smaller;
+    color: var(--gris);
+}
+
+.container-precio{
+    font-size: smaller;
+}
+
+.precio{
+    font-size: large;
+    font-weight: bolder;
+}
+
+
+
+.footer-evento{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.75rem;
+    align-items: center;
+
+}
+
+
+.btn-reservar{
+    border: none;
+    background-color: var(--azul);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
 }

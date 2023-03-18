@@ -10,27 +10,39 @@ body {
 }
 
 :root {
-    --fuente-texto: #ECE8E5;
+    --blanco-roto: #ECE8E5;
+    --amarillo: #ECB561;
+    --azul-osc: #494E56;
+    --azul:rgb(0, 183, 255);
+    --gris: #3b3f44;
+    
+    --azul-claro: #95D5E8;
+    --naranja: #EFB08A;
+    --marron: #A86F66;
+    --rosa: #B57E78;
+    --azul-gris: #384F5F; 
+    
+    --color-1: var(--azul-claro);
+    --color-2: var(--naranja);
+    --color-3: var(--marron);
+    --color-4: var(--rosa);
+    --color-5: var(--azul-gris);
+    
+    --fondo: var(--color-1);
+    --contraste: var(--color-2);
+    --principal: var(--color-3);
+    --acento: var(--color-4);
+    --texto: var(--color-5);
+
+
+    
+    --color-btn: var(--azul);
+    --fuente-texto: var(--blanco-roto);
     --fuente-texto-oscura: #384F5F;
+
     --bg-color: #fff;
     --bg-color-oscuro: #3EA6A2;
     --bg-color-oscuro-2: #494E56;
     --bg-color-oscuro-2-claro: #ccd8e9;
-
-
-    --azul-claro: #ECE8E5;
-    --naranja: #3EA6A2;
-    --rojo: #ECB561;
-    --rosa: #9E683F;
-    --azul-osc: #494E56;
-    --azul:rgb(0, 183, 255);
-  
-    --fondo: var(--azul-claro);
-    --contraste: var(--naranja);
-    --principal: var(--rojo);
-    --acento: var(--rosa);
-    --texto: var(--azul-osc);
-
-    --color-btn: var(--azul);
   }
   
