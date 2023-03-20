@@ -241,8 +241,6 @@ body {
     padding-top: 1.25rem;
 }
 
-.nombre_evento {}
-
 .fecha-evento {
     padding-top: 0.5rem;
     color: var(--naranja);
@@ -306,11 +304,11 @@ body {
 /* Modal Content */
 .container-reserva {
     position: relative;
-    background-color: #fefefe;
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    
+    max-width: 500px;
+
     width: 60%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
@@ -319,6 +317,8 @@ body {
     animation-duration: 1s;
     border-radius: 10px;
     z-index: 0;
+    /* DUDA, por que el radio no va */
+    border-radius: 20px;
 }
 
 /* Add Animation */
@@ -367,23 +367,103 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 1rem;
-    background-color: #5cb85c;
+    background: linear-gradient(135deg, var(--azul-gris), var(--azul));
+
     color: white;
     z-index: 1;
 }
 
+
 .form-body {
     padding-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     padding-bottom: 2rem;
+    display: block;
+    /* display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0rem; */
+    /* font-size: larger; */
+
+}
+
+.input-label {
+    /* display: block; */
+    /* padding-top: 0rem;
+    padding-bottom: 0rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem; */
+}
+
+.input-text {
+    /* display: block; */
+    /* padding-top: 0rem;
+    padding-bottom: 0rem; */
+
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    outline: none;
+    border: 1px solid var(--azul-gris);
+    border-radius: 0.5rem;
+    min-height: 30px;
+    font-size: larger;
+}
+
+
+.input-text:focus {
+    border: double 2px transparent;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(white, white), linear-gradient(135deg, var(--azul-gris), var(--azul));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.btnsubmit {
+    min-height: 35px;
+    width: 100%;
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    /* transition: all 0.3s ease; */
+    color: var(--blanco);
+    background: linear-gradient(135deg, var(--azul-gris), var(--azul));
+    background-size: 600% 600%;
+    animation: GradientAnimation 3s ease infinite;
+}
+
+
+@keyframes GradientAnimation {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+.btnsubmit:hover {
+    border: double 2px transparent;
+    /* border-radius: 0.5rem; */
+    background-image: linear-gradient(white, white), linear-gradient(135deg, var(--azul-gris), var(--azul));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: var(--azul-gris);
 }
 
 .form-footer {
     padding-top: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 2rem;
-    background-color: #5cb85c;
+    padding-bottom: 1rem;
+    background-color: var(--azul-gris);
     color: white;
 }

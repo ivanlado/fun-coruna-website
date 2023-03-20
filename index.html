@@ -113,13 +113,27 @@
                     <span class="close">&times;</span>
                     <h2>Modal Header</h2>
                 </div>
-                <div class="form-body">
-                    <p>Some text in the Modal Body</p>
-                    <p>Some other text...</p>
+                <div class="form-body fondo-blanco">
+                    <label for="apellidos" class="input-label">Apellidos</label><br>
+                    <input type="text" class="input-text" name="apellidos" placeholder="Apellidos" required><br>
+                    <label for="nombre" class="input-label">Nombre</label><br>
+                    <input type="text" class="input-text" name="nombre"><br>
+                    <label for="dni" class="input-label">DNI</label><br>
+                    <input type="text" class="input-text" name="dni"><br>
+                    <label for="email" class="input-label" >Correo electrónico</label><br>
+                    <input type="text" class="input-text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br>
+                    <label for="pais" class="input-label">País de residencia</label><br>
+                    <input type="text" class="input-text" name="pais"><br>
+                    <label for="ntel" class="input-label">Número de teléfono</label><br>
+                    <input type="text" class="input-text" name="ntel"><br>
+                    <label for="cantidad"class="input-label">Cantidad de entradas</label><br>
+                    <input type="number" min="1" max="10" value="1" class="input-text" name="cantidad"><br>
+                    <input type="checkbox" class="input-text" name="condiciones">He leido, y acepto las políticas de privacidad y de la compañía<br>
+                    <input type="submit" value="Reservar" name="reservar" class="btnsubmit">
                 </div>
-                <div class="form-footer">
+                <!-- <div class="form-footer">
                     <h3>Modal Footer</h3>
-                </div>
+                </div> -->
             </div>
         </form>
 
