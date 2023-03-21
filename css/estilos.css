@@ -100,7 +100,6 @@ body {
     text-align: center;
     align-items: center;
     border-radius: 40px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
     padding: 0 10%;
 }
 
@@ -129,7 +128,7 @@ body {
 }
 
 .barra_busqueda button[type=submit]:hover {
-    background-color: #45a049;
+    background-color: var(--amarillo);
 }
 
 /* Eventos */
@@ -318,7 +317,7 @@ body {
     border-radius: 10px;
     z-index: 0;
     /* DUDA, por que el radio no va */
-    border-radius: 20px;
+    border-radius: 1rem 1rem 0 0;
 }
 
 /* Add Animation */
@@ -368,9 +367,11 @@ body {
     padding-right: 2rem;
     padding-bottom: 1rem;
     background: linear-gradient(135deg, var(--azul-gris), var(--azul));
-
+    border-radius: 30px;
     color: white;
     z-index: 1;
+    border-radius: 1rem 1rem 0 0;
+
 }
 
 

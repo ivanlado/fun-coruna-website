@@ -5,6 +5,16 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* Hero */
 
 .hero {
@@ -38,25 +48,34 @@ body {
 /* Informacion */
 
 
+
 .container_informacion {
     text-align: center;
     align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     padding-left: 10%;
     padding-right: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
     justify-content: center;
     /* height: 40vh; */
 }
 
 @media (max-width: 800px) {
-    .container_informacion{
+    .container_informacion {
         grid-template-columns: 1fr;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        gap: 1rem;
     }
-    .img-informacion{
+
+    .img-informacion {
         order: 1;
     }
-    .container_texto{
+
+    .container_texto {
         order: 2;
     }
 }
@@ -81,38 +100,33 @@ body {
 .nombre_seccion {
     color: grey;
     font-size: 1rem;
-    margin-bottom: 0;
 }
-
-.frase_seccion {
-    margin-top: 0;
-}
-
-
 
 .container_par {
     background-color: #e5e5f780;
     opacity: 0.8;
-    background-image: radial-gradient(#8289ff 0.8px, transparent 0.8px), radial-gradient(#444cf7 0.8px, #e5e5f7 0.8px);
+    background-image: radial-gradient(var(--azul) 0.6px, transparent 0.8px);
     background-size: 32px 32px;
     background-position: 0 0, 16px 16px;
 }
 
 .container_impar {
-    background-color: rgb(24, 94, 245);
+    background-color: var(--azul-osc);
+    color: var(--blanco);
 }
 
-.stats{
+.stats {
     display: grid;
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    padding:  1%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     gap: 2em;
     grid-template-columns: repeat(auto-fit, minmax(160px, auto));
 }
 
-.stat{
+.stat {
     border: 1px dashed #fff;
     border-radius: 5px;
     padding: 20px;
@@ -121,5 +135,13 @@ body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    /* max-width: 200px; */
+    width: 100px;
+    height: 125px;
+}
+
+.stat h5{
+    font-size: medium;
+    padding-top: 0.5rem;
+    padding-bottom: 0.25rem;
 }
