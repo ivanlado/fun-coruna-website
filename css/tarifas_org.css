@@ -5,7 +5,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-h1, h2, h3, h4, p{
+h1,
+h2,
+h3,
+h4,
+p {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -96,9 +100,8 @@ h1, h2, h3, h4, p{
     text-align: center;
     align-items: center;
     justify-content: center;
-    padding: 5% 10%;
-    gap: 3em;
-    min-height: 100vh;
+    padding: 5rem 5rem;
+    gap: 1em;
 }
 
 .container_planes {
@@ -112,16 +115,10 @@ h1, h2, h3, h4, p{
     /* padding: 20px; */
 }
 
-#planes_organizadores {
-    background-color: #efeffa;
-    opacity: 1;
-    background-image: radial-gradient(#444cf7 0.75px, transparent 0.75px), radial-gradient(#444cf7 0.75px, #efeffa 0.75px);
-    background-size: 30px 30px;
-    background-position: 0 0, 15px 15px;
-}
+#planes_organizadores {}
 
 #planes_usuarios {
-    background-color: var(--c-blue-900);
+    background-color: var(--azul);
 }
 
 .container_plan {
@@ -132,31 +129,24 @@ h1, h2, h3, h4, p{
 
 .container_plan:hover {
     transition: all .2s ease-in-out;
-    background: linear-gradient(135deg,
-            var(--c-green-400),
-            var(--c-blue-500) 40%,
-            var(--c-blue-300) 60%,
-            var(--c-blue-700) 100%);
+    background-image: linear-gradient(0, var(--naranja)20%, var(--azul-claro) 50%, var(--azul)80%, var(--azul-gris)100%);
+
     transform: scale(1.01);
 }
 
 .plan {
-    aspect-ratio: 4/6;
-    background-color: var(--c-blue-700);
+    aspect-ratio: 4 / 6;
+    background-color: var(--gris-claro);
     border-radius: 16px;
     max-width: 375px;
     min-width: 250px;
     max-height: 45vh;
     padding: 1rem;
     display: flex;
+    color: black;
     flex-direction: column;
     box-shadow: 0 15px 45px 0 rgba(#000, 0.15);
     position: relative;
-    background-image: linear-gradient(135deg,
-            rgba(#4ade80, 0.15),
-            rgba(#1d7bdb, 0.1) 20%,
-            var(--c-blue-700) 40%,
-            var(--c-blue-700) 100%);
 }
 
 .plan:hover {
@@ -172,11 +162,22 @@ h1, h2, h3, h4, p{
     font-weight: 700;
     display: inline-flex;
     align-self: center;
-    align-items: center;
+    align-items: baseline;
     gap: 4px;
     position: relative;
     color: #fff;
     background: linear-gradient(to right, #FF6B6B, #556270);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.centimos{
+    font-size: 2rem;
+}
+
+.modalidad-pago{
+    font-size: small;
+    background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -187,7 +188,7 @@ h1, h2, h3, h4, p{
     font-weight: 600;
     line-height: 1.25;
     text-align: center;
-    color: #fff;
+    color: black;
 }
 
 .descripcion_plan {
@@ -221,7 +222,7 @@ h1, h2, h3, h4, p{
 
 
 
-.container_opinion_wrap{
+.container_opinion_wrap {
     aspect-ratio: 20/4;
     max-width: 800px;
     margin: auto;
@@ -230,12 +231,9 @@ h1, h2, h3, h4, p{
     width: 100%;
     padding: 5px;
     border-radius: 2rem;
-    background: linear-gradient(135deg,
-    var(--c-green-400),
-    var(--c-blue-500) 40%,
-    var(--c-blue-300) 60%,
-    var(--c-blue-700) 100%);
-    
+    background: linear-gradient(180deg, var(--naranja)20%, var(--azul-claro) 50%, var(--azul)80%, var(--azul-gris)100%);
+
+
 }
 
 .container_opinion {
@@ -262,5 +260,119 @@ h1, h2, h3, h4, p{
     max-height: 100%;
     text-align: center;
     align-items: center;
+    border-radius: 50%;
+}
+
+
+/* The switch - the box around the slider */
+
+.btn-mensual-anual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+}
+
+/* Quitamos el check del checkbox original */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--azul-gris);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--azul-gris);
+    animation-name: animacionToRight;
+    animation-duration: 0.4s;
+}
+
+input:not(:checked)+.slider {
+    animation-name: animacionToLeft;
+    animation-duration: 0.4s;
+}
+
+
+
+@keyframes animacionToRight {
+    0% {
+        background-color: var(--azul-gris);
+    }
+
+    30% {
+        background-color: var(--gris-claro);
+    }
+
+    70% {
+        background-color: var(--gris-claro);
+    }
+
+    100% {
+        background-color: var(--azul-gris);
+    }
+}
+
+@keyframes animacionToLeft {
+    0% {
+        background-color: var(--azul-gris);
+    }
+
+    30% {
+        background-color: var(--gris-claro);
+    }
+
+    70% {
+        background-color: var(--gris-claro);
+    }
+
+    100% {
+        background-color: var(--azul-gris);
+    }
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--azul-gris);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
     border-radius: 50%;
 }

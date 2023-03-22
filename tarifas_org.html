@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/tarifas_org.css">
     <link rel="stylesheet" href="./css/comun.css">
-    <title>Document</title>
+    <script src="./js/tarifas.js"></script>
+    <title>Tarifas Fun Coruña</title>
 </head>
 
 <body>
@@ -21,12 +22,21 @@
         </div>
     </header>
     <main>
-        <section id="planes_organizadores" class="seccion_planes">
+        <section id="planes_organizadores" class="seccion_planes fondo-blanco">
             <h2 class="titulo_seccion_planes">Organizadores y empresas</h2>
+            <div class="btn-mensual-anual">
+                <h3>Mensual</h3>
+                <label class="switch">
+                    <input type="checkbox" id = "btn-mensual-anual-empresas">
+                    <span class="slider round"></span>
+                </label>
+                <h3>Anual</h3>
+            </div>
+
             <div class="container_planes">
                 <div class="container_plan">
                     <article class="plan">
-                        <h3 class="precio">39.99€</h3>
+                        <h3 class="precio" id="kkk">39<span class="centimos">.99€</span> <span class="modalidad-pago">/mes</span></h3>
                         <h2 class="titulo_plan">Premium</h2>
                         <p class="descripcion_plan">A single license for solo designers, developers and freelancers.</p>
                         <div class="features">
@@ -46,8 +56,9 @@
                     </article>
                 </div>
                 <div class="container_plan">
+
                     <article class="plan">
-                        <h3 class="precio">39.99€</h3>
+                        <h3 class="precio">39<span class="centimos">.99€</span> <span class="modalidad-pago">/mes</span></h3>
                         <h2 class="titulo_plan">Premium</h2>
                         <p class="descripcion_plan">A single license for solo designers, developers and freelancers.</p>
                         <div class="features">
@@ -68,7 +79,7 @@
                 </div>
                 <div class="container_plan">
                     <article class="plan">
-                        <h3 class="precio">39.99€</h3>
+                        <h3 class="precio">39<span class="centimos">.99€</span> <span class="modalidad-pago">/mes</span></h3>
                         <h2 class="titulo_plan">Premium</h2>
                         <p class="descripcion_plan">A single license for solo designers, developers and freelancers.</p>
                         <div class="features">
@@ -98,9 +109,98 @@
                     </blockquote>
                 </div>
             </div>
-        </section>    
+        </section>
 
-        
+        <section id="planes_usuarios" class="seccion_planes fondo-blanco">
+            <h2 class="titulo_seccion_planes">Organizadores y empresas</h2>
+            <div  class="btn-mensual-anual">
+                <h3>Mensual</h3>
+                <label class="switch">
+                    <input type="checkbox" id = "btn-mensual-anual-usuarios">
+                    <span class="slider round"></span>
+                </label>
+                <h3>Anual</h3>
+            </div>
+
+            <div class="container_planes">
+                <div class="container_plan">
+                    <article class="plan">
+                        <h3 class="precio">39<span class="centimos">.99€</span> <span class="modalidad-pago">/mes</span></h3>
+                        <h2 class="titulo_plan">Premium</h2>
+                        <p class="descripcion_plan">A single license for solo designers, developers and freelancers.</p>
+                        <div class="features">
+                            <div class="feature">
+                                <img src="./images/icons/bx-check-circle.svg" alt="" class="icono_feature">
+                                <p class="feature_desc">single user license, licencia para un solo uso, single user</p>
+                            </div>
+                            <div class="feature">
+                                <img src="./images/icons/bx-check-circle.svg" alt="" class="icono_feature">
+                                <p class="feature_desc">single user license</p>
+                            </div>
+                            <div class="feature">
+                                <img src="./images/icons/bx-check-circle.svg" alt="" class="icono_feature">
+                                <p class="feature_desc">single user license</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="container_plan">
+
+                    <article class="plan">
+                        <h3 class="precio">39<span class="centimos">.99€</span> <span class="modalidad-pago">/mes</span></h3>
+                        <h2 class="titulo_plan">Premium</h2>
+                        <p class="descripcion_plan">A single license for solo designers, developers and freelancers.</p>
+                        <div class="features">
+                            <div class="feature">
+                                <img src="./images/icons/bx-check-circle.svg" alt="" class="icono_feature">
+                                <p class="feature_desc">single user license</p>
+                            </div>
+                            <div class="feature">
+                                <img src="./images/icons/bx-check-circle.svg" alt="" class="icono_feature">
+                                <p class="feature_desc">single user license</p>
+                            </div>
+                            <div class="feature">
+                                <img src="./images/icons/bx-check-circle.svg" alt="" class="icono_feature">
+                                <p class="feature_desc">single user license</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="container_plan">
+                    <article class="plan">
+                        <h3 class="precio">39<span class="centimos">.99€</span> <span class="modalidad-pago">/mes</span></h3>
+                        <h2 class="titulo_plan">Premium</h2>
+                        <p class="descripcion_plan">A single license for solo designers, developers and freelancers.</p>
+                        <div class="features">
+                            <div class="feature">
+                                <img src="./images/icons/bx-check-circle.svg" alt="" class="icono_feature">
+                                <p class="feature_desc">single user license</p>
+                            </div>
+                            <div class="feature">
+                                <img src="./images/icons/bx-check-circle.svg" alt="" class="icono_feature">
+                                <p class="feature_desc">single user license</p>
+                            </div>
+                            <div class="feature">
+                                <img src="./images/icons/bx-check-circle.svg" alt="" class="icono_feature">
+                                <p class="feature_desc">single user license</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+            <div class="container_opinion_wrap">
+                <div class="container_opinion">
+                    <img src="./images/pelicano.jpg" alt="" class="foto_cliente">
+                    <blockquote class="container_texto">
+                        <h4 class="opinion">Fun Coruna ha mejorado la expansión de mi empresa.</h4>
+                        <cite class="autor_opinion">Sala Pelícano</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+  
 
     </main>
 </body>
