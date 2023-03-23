@@ -34,13 +34,20 @@ header {
     padding: 1vh 10px;
 }
 
-nav{
+nav {
     display: flex;
-    gap: 2em;
+    gap: 2.5em;
     padding-top: 3rem;
     align-items: center;
     font-size: 1.25rem;
     color: white;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 
@@ -54,9 +61,27 @@ nav a {
     text-decoration: none;
 }
 
+.nav-principal {
+    display: flex;
+    justify-content: space-between;
+}
 
 .logo {
     font-weight: 1500;
+    margin: auto;
+
+}
+
+.btn-menu {
+    display: none;
+    margin-left: auto;
+}
+
+.open-menu {
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 2s ease-out;
 }
 
 
@@ -83,16 +108,13 @@ nav a {
 }
 
 
-.btn-menu {
-    display: none;
-}
+
 
 /* menu responsivo */
 @media(max-width: 800px) {
 
-    header{
+    header {
         justify-content: start;
-        align-items: start;
         gap: 0.25rem;
     }
 
@@ -100,26 +122,34 @@ nav a {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
-    .nav_menu_right{
-        margin: 0 auto;
+
+    .nav-items {
+        flex-direction: column;
+        gap: 0.25rem;
+        height: 0px;
+        transition: height 1s ease-in-out;
     }
 
-    .portada_title{
-        display: none;
-    }
-    
-
-    .dropdown-menu,
     .btn-menu {
         display: block;
     }
+
+    .nav_menu_right {
+        margin: 0 auto;
+    }
+
+    .portada_title {
+        display: none;
+    }
+
 }
 
 
 /* Portada */
 
+
 .portada {
+    padding-top: 5rem;
     text-align: center;
 }
 
@@ -129,6 +159,7 @@ nav a {
 
 .portada>p {
     font-size: 1.5rem;
+    text-align: center;
 }
 
 
@@ -505,7 +536,3 @@ nav a {
     background-color: var(--azul-gris);
     color: white;
 }
-
-
-
-
