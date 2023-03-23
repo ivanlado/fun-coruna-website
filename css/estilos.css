@@ -468,3 +468,45 @@ body {
     background-color: var(--azul-gris);
     color: white;
 }
+
+
+
+
+/* dropdown menu */
+
+.dropdown-menu {
+    display: none;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.2s;
+}
+
+.dropdown-menu.open {
+    height: auto;
+}
+
+.dropdown-menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+}
+
+
+.btn-menu {
+    display: none;
+}
+
+/* menu responsivo */
+@media(max-width: 800px) {
+    .nav_menu {
+        display: none;
+    }
+
+    .dropdown-menu,
+    .btn-menu {
+        display: block;
+    }
+}

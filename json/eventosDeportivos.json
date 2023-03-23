@@ -1,0 +1,28 @@
+{
+  "eventos": [
+    {
+      "nombreEvento": "Partido1",
+      "fecha": "25 abril",
+      "lugar": "Estadio Riazor",
+      "precio": "20"
+    },
+    {
+      "nombreEvento": "Partido2",
+      "fecha": "25 abril",
+      "lugar": "Estadio Riazor",
+      "precio": "20"
+    },
+    {
+      "nombreEvento": "Partido3",
+      "fecha": "25 abril",
+      "lugar": "Estadio Riazor",
+      "precio": "20"
+    },
+    {
+      "nombreEvento": "Partido4",
+      "fecha": "30 abril",
+      "lugar": "Estadio Riazor",
+      "precio": "30"
+    }
+  ]
+}
