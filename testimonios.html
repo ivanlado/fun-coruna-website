@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/testimonios.css">
+    <link rel="stylesheet" href="./css/comun.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <title>Testimonial</title>
+</head>
+
+<body>
+    <div id="page" class="site">
+            <div class="container">
+                <div class="testi">
+                    <div class="head">
+                        <h3>Testimonials</h3>
+                        <p>See what people is saying</p>
+                    </div>
+                    <div class="body swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail">
+                                        <img src="./images/opinion1.jpg" alt="">
+                                    </div>
+                                    <div class="aside">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nemo
+                                            commodi maxime numquam, cum quo necessitatibus voluptatibus iure ab nihil
+                                            mollitia quisquam veniam totam beatae doloribus velit reprehenderit tenetur
+                                            dignissimos.</p>
+                                        <div class="name">
+                                            <h4>Iván Lado</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="">
+        const swiper = new Swiper('.swiper', {
+            autoHeight: true,
+            loop: true,
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>
