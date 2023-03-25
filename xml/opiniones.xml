@@ -1,0 +1,22 @@
+<opiniones>
+    <empresas>
+        <empresa>
+            <nombre>Concello de A Coruña</nombre>
+            <opinion>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum rem repellat voluptatum? Odio ullam quidem earum distinctio, obcaecati error minima quo similique sequi culpa nemo ipsum placeat ea in numquam?</opinion>
+        </empresa>
+        <empresa>
+            <nombre>Sala Pelícano</nombre>
+            <opinion>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum rem repellat voluptatum? Odio ullam quidem earum distinctio, obcaecati error minima quo similique sequi culpa nemo ipsum placeat ea in numquam?</opinion>
+        </empresa>
+        <empresa>
+            <nombre>Cinesa</nombre>
+            <opinion>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum rem repellat voluptatum? Odio ullam quidem earum distinctio, obcaecati error minima quo similique sequi culpa nemo ipsum placeat ea in numquam?</opinion>
+        </empresa>
+    </empresas>
+    <usuarios>
+        <usuario>
+            <nombre>Iván Lado</nombre>
+            <opinion>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum rem repellat voluptatum? Odio ullam quidem earum distinctio, obcaecati error minima quo similique sequi culpa nemo ipsum placeat ea in numquam?</opinion>
+        </usuario>
+    </usuarios>
+</opiniones>
