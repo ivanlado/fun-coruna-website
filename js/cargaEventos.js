@@ -19,10 +19,8 @@ function cargarEventos() {
                 code += '</p><div class="footer-evento"><p class="container-precio"> Desde <span class="precio">';
                 code += e.precio;
                 code += '€</span></p><p class="btn-reservar" onclick="reservar(this)"> Reservar</p></div></div></article>';
-                console.log(code);
             }
             const container = $('#eventos-hoy .caja_eventos');
-            console.log(container);
             container.append(code);
         }
     }

@@ -6,12 +6,18 @@
     --event-radius: 0.8rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(230 244 246);
-    /* background-color: #e5e5f7; */
-    /* background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 30px 30px, linear-gradient(#a2cefb 2.4000000000000004px, transparent 2.4000000000000004px) 0 -1.2000000000000002px, linear-gradient(90deg, #a2cefb 2.4000000000000004px, #e5e5f7 2.4000000000000004px) -1.2000000000000002px 0;
-    background-size: 60px 60px, 60px 60px, 30px 30px, 30px 30px; */
 }
 
 .container {
@@ -28,10 +34,9 @@ header {
     flex-direction: column;
     height: 60vh;
     color: black;
-    background-image: linear-gradient(180deg, #00000023 0%, #00000023 100%), url('../images/beach.jpg');
+    background-image: linear-gradient(180deg, rgba(27, 26, 26, 0.35), rgba(49, 49, 49, 0.35)), url('../images/beach.jpg');
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-    padding: 1vh 10px;
 }
 
 nav {
@@ -40,9 +45,17 @@ nav {
     padding-top: 3rem;
     align-items: center;
     font-size: 1.25rem;
-    color: white;
+    justify-content: center;
+    color: var(--blanco);
 }
 
+.container-logo {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Conjunto de elementos de la barra de navegacion, que formaran
+parte del menu desplegable responsivo cuando la pantalla se haga pequeña */
 .nav-items {
     display: flex;
     flex-direction: row;
@@ -50,28 +63,19 @@ nav {
     gap: 1.5rem;
 }
 
-
-.nav_menu_right {
-    margin-left: auto;
-
-}
-
+/* Elementos de la barra de decoracion */
 nav a {
     color: white;
     text-decoration: none;
 }
 
-.nav-principal {
-    display: flex;
-    justify-content: space-between;
+
+/* Logo de la barra de navegacion */
+.logo-nav {
+    font-weight: bold;
 }
 
-.logo {
-    font-weight: 1500;
-    margin: auto;
-
-}
-
+/* Boton para abrir la barra de navegacion responsiva cuando la pantalla se hace pequeña */
 .btn-menu {
     display: none;
     margin-left: auto;
@@ -84,32 +88,76 @@ nav a {
 }
 
 
-/* dropdown menu */
 
-.dropdown-menu {
-    display: none;
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    height: 0px;
-    overflow: hidden;
-    transition: height 0.2s;
+
+
+/* Hero */
+
+/* Contenedor del hero */
+.hero {
+    padding-top: 4rem;
+    text-align: center;
+    color: var(--blanco);
 }
 
-.dropdown-menu.open {
-    height: auto;
+/* Titulo del hero */
+.hero-titulo {
+    font-size: 4rem;
+    color: var(--white);
+    /* background: linear-gradient(to left, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
 }
 
-.dropdown-menu li {
+/* Descripcion del hero */
+.hero-text {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+/* Barra del busqueda */
+.barra-busqueda {
     display: flex;
+    text-align: center;
     align-items: center;
-    justify-content: center;
-    padding: 0.25rem;
+    padding-top: 2rem;
+    border-radius: 40px;
+    width: 900px;
 }
 
+/* Entrada de texto de la barra de busqueda */
+.barra-busqueda input[type=text] {
+    flex: 1;
+    height: auto;
+    width: 30%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
 
+}
 
+/* Boton de buscar de la barra de busqueda */
+.barra-busqueda button[type=submit] {
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--azul);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
 
-/* menu responsivo */
+/* Boton de buscar de la barra de busqueda efecto hover */
+.barra-busqueda button[type=submit]:hover {
+    background-color: var(--amarillo);
+}
+
+/* Header responsivo */
 @media(max-width: 800px) {
 
     header {
@@ -125,77 +173,26 @@ nav a {
     .nav-items {
         flex-direction: column;
         gap: 0.25rem;
-        height: 0px;
-        transition: height 1s ease-in-out;
     }
 
     .btn-menu {
         display: block;
     }
 
-    .nav_menu_right {
-        margin: 0 auto;
+    .logo-nav {
+        background: linear-gradient(to left, #30CFD0 0%, #330867 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
-    .portada_title {
+    .hero {
         display: none;
     }
 
-}
+    .barra-busqueda {
+        width: auto;
+    }
 
-
-/* Portada */
-
-
-.portada {
-    padding-top: 5rem;
-    text-align: center;
-}
-
-.portada>h1 {
-    font-size: 3rem;
-}
-
-.portada>p {
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-
-.barra_busqueda {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    border-radius: 40px;
-    padding: 0 10%;
-}
-
-.barra_busqueda input[type=text] {
-    flex: 1;
-    height: auto;
-    width: 30%;
-    border: none;
-    border-radius: 20px;
-    /* outline: none; */
-    padding: 10px;
-    font-size: 16px;
-
-}
-
-.barra_busqueda button[type=submit] {
-    border: none;
-    width: fit-content;
-    height: fit-content;
-    background-color: var(--azul);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.barra_busqueda button[type=submit]:hover {
-    background-color: var(--amarillo);
 }
 
 /* Eventos */
