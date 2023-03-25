@@ -14,14 +14,10 @@ function updateIndex(direccion) {
     indexTestimonio += direccion;
     indexTestimonio = indexTestimonio < 0 ? testimonios.length - 1 : indexTestimonio;
     indexTestimonio %= testimonios.length;
-
-    indexTestimonioAnterior = indexTestimonio - 1;
-    indexTestimonioAnterior = indexTestimonioAnterior < 0 ? testimonios.length - 1 : indexTestimonioAnterior;
-    indexTestimonioAnterior %= testimonios.length;
 }
 
 function cambiarTestimonio(direccion) {
     updateIndex(direccion);
-    $(".testimonio").eq(indexTestimonioAnterior).hide();   
+    $(".testimonio").hide();   
     $(".testimonio").eq(indexTestimonio).show();  
 }
