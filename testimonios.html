@@ -6,57 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/testimonios.css">
     <link rel="stylesheet" href="./css/comun.css">
+    <script src="./js/testimonios.js"></script>
     <title>Testimonial</title>
 </head>
 
 <body>
-    <main>
-
-        <article class="testimonios">
-            <a class="prev" onclick="cambiarTestimonio(-1)">&#10094;</a>
-            <article class="testimonio">
-                <img src="./images/opinion1.jpg" alt="">
-                <h3>Hola</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum rem repellat voluptatum? Odio ullam
-                    quidem earum distinctio, obcaecati error minima quo similique sequi culpa nemo ipsum placeat ea in
-                    numquam?</p>
+    <header>
+        <h1 class="hero-titulo">Descubre lo que piensan de nosotros</h1>
+        <a href="#comienzo" class="btn">Ver opiniones</a>
+    </header>
+    <main id="comienzo">
+        <section class="opiniones-empresas">
+            <div class="presentacion">
+                <h2>Opiniones de empresas</h2>
+                <blockquote>
+                    Fun Coruña ha demostrado ser un socio invaluable para nuestra compañía. Su equipo altamente
+                    capacitado y su amplia red de contactos en la industria han sido cruciales en la creación y gestión
+                    exitosa de varios eventos clave para nuestro negocio. Su enfoque en la promoción ha garantizado una
+                    amplia participación y exposición, lo que ha llevado a una mayor visibilidad y crecimiento en
+                    nuestro mercado. En general, estamos muy satisfechos con la colaboración y esperamos seguir
+                    trabajando juntos en futuros eventos.
+                    <p>Sala Pelícano</p>
+                </blockquote>
+            </div>
+            <article class="testimonios">
+                <a class="prev" onclick="cambiarTestimonio(-1)">&#10094;</a>
+                <article class="testimonio">
+                    <img src="./images/logoconcello.png" alt="">
+                    <h3>Concello de A Coruña</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum rem repellat voluptatum? Odio
+                        ullam
+                        quidem earum distinctio, obcaecati error minima quo similique sequi culpa nemo ipsum placeat ea
+                        in
+                        numquam?</p>
+                </article>
+                <article class="testimonio">
+                    <img src="./images/pelicano.jpg" alt="">
+                    <h3>Sala pelícano</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum rem repellat voluptatum? Odio
+                        ullam
+                        quidem earum distinctio, obcaecati error minima quo similique sequi culpa nemo ipsum placeat ea
+                        in
+                        numquam?</p>
+                </article>
+                <article class="testimonio">
+                    <img src="./images/cinesa.png" alt="">
+                    <h3>Cinesa</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum rem repellat voluptatum? Odio
+                        ullam
+                        quidem earum distinctio, obcaecati error minima quo similique sequi culpa nemo ipsum placeat ea
+                        in
+                        numquam?</p>
+                </article>
+                <a class="next" onclick="cambiarTestimonio(1)">&#10095;</a>
             </article>
-            <article class="testimonio">
-                <h3>Hola2</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum rem repellat voluptatum? Odio ullam
-                    quidem earum distinctio, obcaecati error minima quo similique sequi culpa nemo ipsum placeat ea in
-                    numquam?</p>
-            </article>
-            <article class="testimonio">
-                <h3>Hola3</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum rem repellat voluptatum? Odio ullam
-                    quidem earum distinctio, obcaecati error minima quo similique sequi culpa nemo ipsum placeat ea in
-                    numquam?</p>
-            </article>
-            <a class="next" onclick="cambiarTestimonio(1)">&#10095;</a>
-        </article>
+        </section>
     </main>
-    <script>
-        let indexTestimonio = 0;
-        const testimonios = document.getElementsByClassName("testimonio");
-
-        for (i = 0; i < testimonios.length; i++) {
-            if (i == indexTestimonio) continue;
-            testimonios[i].style.display = "none";
-        }
-
-        function cambiarTestimonio(direccion) {
-            indexTestimonio += direccion;
-            indexTestimonio = indexTestimonio < 0 ? testimonios.length - 1 : indexTestimonio;
-            indexTestimonio %= testimonios.length;
-            for (tes of testimonios) {
-                tes.style.display = "none";
-            }
-            testimonios[indexTestimonio].style.display = "flex"
-        }
-
-
-    </script>
+    
 </body>
 
 </html>
