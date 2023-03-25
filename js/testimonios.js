@@ -1,4 +1,5 @@
 let indexTestimonio = 0;
+let indexTestimonioAnterior = 0;
 let testimonios;
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -9,17 +10,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 
-function updateIndex(direccion){
+function updateIndex(direccion) {
     indexTestimonio += direccion;
     indexTestimonio = indexTestimonio < 0 ? testimonios.length - 1 : indexTestimonio;
     indexTestimonio %= testimonios.length;
+
+    indexTestimonioAnterior = indexTestimonio - 1;
+    indexTestimonioAnterior = indexTestimonioAnterior < 0 ? testimonios.length - 1 : indexTestimonioAnterior;
+    indexTestimonioAnterior %= testimonios.length;
 }
 
 function cambiarTestimonio(direccion) {
     updateIndex(direccion);
-    for (tes of testimonios) {
-        tes.style.display = "none";
-    }
-    
-    testimonios[indexTestimonio].style.display = "flex";
+    $(".testimonio").eq(indexTestimonioAnterior).hide();   
+    $(".testimonio").eq(indexTestimonio).show();  
 }
