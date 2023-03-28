@@ -3,7 +3,7 @@ const filePath = "http://127.0.0.1:5500/json/" + fileName;
 const numberVisiblesItems = 4;
 
 function cargarEventos() {
-    let xhttp = new XMLHttpRequest()
+    let xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
         if (this.readyState == 4 && this.status == 200) {
             let json = JSON.parse(this.responseText);
@@ -19,10 +19,8 @@ function cargarEventos() {
 
 function cargaEventos(idHTML, eventos){
     let code = '';
-    console.log(eventos);
-    // const eventos = json.eventos.filter(evento => evento.fecha === "25 abril");
     for (e of eventos) {
-        code += '<article class="evento"> <div class="container_imagen_evento"> <img src="';
+        code += '<article class="evento"> <div class="el sel"> <img src="';
         code += e.imagen;
         code += '" alt="Deportivo vs. Badajoz" class="image_evento img"></div><div class="container_text_evento"><h3 class="nombre_evento">';
         code += e.nombreEvento;
