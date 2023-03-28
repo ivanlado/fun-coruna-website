@@ -1,0 +1,154 @@
+/* formulario */
+
+:root{
+    --radius: 20px;
+    --font-big: 1.2rem;
+}
+
+#form-reserva {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.616);
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Modal Content */
+.container-reserva {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    max-width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: var(--radius);
+    /* Animacion del inicio */
+    -webkit-animation-name: animacionInicio;
+    -webkit-animation-duration: 1s;
+    animation-name: animacionInicio;
+    animation-duration: 1s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animacionInicio {
+    from {
+        left: -100px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animacionInicio {
+    from {
+        left: -100px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+/* Btn cerrar form */
+.close {
+    color: white;
+    float: right;
+    margin-right: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Cabecera del formulario */
+.form-header {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--azul-gris), var(--azul));
+    border-radius: var(--radius);
+    color: white;
+    z-index: 1;
+    border-radius: 1rem 1rem 0 0;
+
+}
+
+/* Contenido del formulario */
+.form-body {
+    display: block;
+    padding: 2rem 4rem;
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+
+form input, form label{
+    display: block;
+    font-size: var(--font-big);
+}
+
+form input{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    /* padding interno */
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--azul-gris);
+    border-radius: 0.5rem;
+    min-height: 30px;
+}
+
+/* btn de reservar */
+#btnsubmit {
+    min-height: 35px;
+    width: 100%;
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    color: var(--blanco);
+    /* Animacion para el btn de reservar */
+    background: linear-gradient(90deg, var(--azul-gris), var(--azul));
+    background-size: 600% 600%;
+    animation: GradientAnimation 2s ease infinite;
+}
+
+
+/* Animacion para el btn de reservar */
+@keyframes GradientAnimation {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/* Animación btn de reservar hover */
+#btnsubmit:hover {
+    border: double 2px transparent;
+    /* border-radius: 0.5rem; */
+    background-image: linear-gradient(white, white), linear-gradient(135deg, var(--azul-gris), var(--azul));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: var(--azul-gris);
+}
