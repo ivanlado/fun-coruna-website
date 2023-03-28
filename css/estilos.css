@@ -114,7 +114,7 @@ nav a {
 }
 
 /* Btnes acceso rápido a eventos */
-.btns-tipos-eventos{
+.btns-tipos-eventos {
     display: flex;
     align-items: center;
     text-align: center;
@@ -122,7 +122,7 @@ nav a {
     padding-top: 20px;
 }
 
-.btns-tipos-eventos a{
+.btns-tipos-eventos a {
     font-size: 1.1rem;
     font-weight: bold;
     text-decoration: none;
@@ -146,6 +146,7 @@ nav a {
     .nav-items {
         flex-direction: column;
         gap: 0.25rem;
+        display: none;
     }
 
     .btn-menu {
@@ -160,24 +161,39 @@ nav a {
         display: none;
     }
 
+    .btns-tipos-eventos {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+}
+
+@media(min-width: 801px) {
+    .nav-items {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+    }
 }
 
 /* Eventos */
 
-main{
+main {
     padding-top: 40px;
 }
 
 
-.seccion-eventos{
-    background-color: var(--gris-claro);    
+.seccion-eventos {
+    background-color: var(--gris-claro);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 40px;
 }
 
 /* Parrafo de debajo del titulo de la caja la seccion de eventos */
-.seccion-eventos p{
+.seccion-eventos p {
     padding-top: 0.5rem;
 }
 
@@ -203,21 +219,21 @@ main{
     border-radius: 50%;
 }
 
-.prev{
+.prev {
     margin-right: 20px;
 }
 
-.next{
+.next {
     margin-left: 20px;
 }
 
-.prev:hover{
+.prev:hover {
     background: linear-gradient(90deg, var(--azul-gris), var(--azul));
     border: 0px;
     fill: white;
 }
 
-.next:hover{
+.next:hover {
     background: linear-gradient(270deg, var(--azul-gris), var(--azul));
     border: 0px;
     fill: white;
