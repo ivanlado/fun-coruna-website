@@ -195,6 +195,7 @@ main {
     border-width: 1px;
     border: 2px solid;
     border-radius: 50%;
+    filter: invert(1);
 }
 
 .prev {
@@ -236,6 +237,7 @@ main {
     align-items: center;
     border-width: 0;
     border-style: solid;
+    box-shadow: 0 0 40px white;
     border-color: #e5e7eb;
     display: grid;
     grid-template-rows: 3fr 2fr;
@@ -333,6 +335,31 @@ main {
     border-radius: 20px;
     margin-left: 10px;
     cursor: pointer;
+}
+
+/* fondos cajas eventos */
+#eventos-deportivos{
+    background-image: linear-gradient(to right top, rgba(27, 26, 26, 0.55), rgba(49, 49, 49, 0.55)), url("../images/estadio2.jpg");
+    background-size: cover;
+    color: var(--blanco);
+}
+
+#eventos-destacados{
+    background-image: linear-gradient(to right top, rgba(27, 26, 26, 0.55), rgba(49, 49, 49, 0.55)), url("../images/social2.jpg");
+    background-size: cover;
+    color: var(--blanco);
+}
+
+#eventos-sociales{
+    background-image: linear-gradient(to right top, rgba(27, 26, 26, 0.55), rgba(49, 49, 49, 0.55)), url("../images/chinchin.jpg");
+    background-size: cover;
+    color: var(--blanco);
+}
+
+#eventos-musicales{
+    background-image: linear-gradient(to right top, rgba(27, 26, 26, 0.55), rgba(49, 49, 49, 0.55)), url("../images/social3.jpg");
+    background-size: cover;
+    color: var(--blanco);
 }
 
 
