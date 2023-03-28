@@ -1,5 +1,6 @@
 const fileName = "eventos.json";
 const filePath = "http://127.0.0.1:5500/json/" + fileName;
+const numberVisiblesItems = 4;
 
 function cargarEventos() {
     let xhttp = new XMLHttpRequest()
@@ -34,7 +35,7 @@ function cargaEventos(idHTML, eventos){
     const container = $('#' + idHTML + ' .caja_eventos');
     container.append(code);
     const eventosHide = $(container).children();
-    eventosHide.filter(':gt(3)').hide();
+    eventosHide.filter(':gt(' + ( numberVisiblesItems-1)+')').hide();
 }
 
 cargarEventos();
