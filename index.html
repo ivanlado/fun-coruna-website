@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="./js/date.js"></script>
     <script src="./js/menuResponsivo.js"></script>
+    <script src="./js/slideEventos.js"></script>
 </head>
 
 
@@ -47,13 +48,42 @@
 
     <main class="main container">
 
-        <section id="eventos-hoy" class="container_eventos">
+        <section class="seccion-eventos" id="eventos-hoy">
             <h2 class="tipo_eventos" id="current-date"> Eventos destacados</h2>
-            <p class="comentario_container_eventos">Estos son los eventos más destacados para los próximos días</p>
+            <p>Estos son los eventos más destacados para los próximos días</p>
             <div class="container-caja-eventos">
                 <div class="indexActual" style="display: none;">0</div>
                 <img src="./images/icons/bxs-chevron-left.svg" alt="" class="prev">
                 <div class="caja_eventos">
+                    <!-- Aquí tienen que ir los eventos cuando se carguen desde un archivo JSON mediante Ajax -->
+                    <!-- <article class="evento">
+                        <div class="container_imagen_evento">
+                            <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
+                        </div>
+                        <div class="container_text_evento">
+                            <h3 class="nombre_evento">Partido Deportivo vs. Badajoz</h3>
+                            <p class="fecha-evento"> sabado 1 abril, 21:00</p>
+                            <p class="lugar-evento"> Estadio de Abanca Riazor</p>
+                            <div class="footer-evento">
+                                <p class="container-precio"> Desde <span class="precio">20€</span></p>
+                                <p class="btn-reservar" onclick="reservar(this)"> Reservar</p>
+                            </div>
+                        </div>
+                    </article>-->
+                </div>
+                <img src="./images/icons/bxs-chevron-right.svg" alt="" class="next">
+
+            </div>
+        </section>
+
+        <section class="seccion-eventos" id="eventos-deportivos">
+            <h2 class="tipo_eventos" id="current-date"> Eventos deportivos</h2>
+            <p>Estos son los eventos deportivos para los próximos días</p>
+            <div class="container-caja-eventos">
+                <div class="indexActual" style="display: none;">0</div>
+                <img src="./images/icons/bxs-chevron-left.svg" alt="" class="prev">
+                <div class="caja_eventos">
+                    <!-- Aquí tienen que ir los eventos cuando se carguen desde un archivo JSON mediante Ajax -->
                     <!-- <article class="evento">
                         <div class="container_imagen_evento">
                             <img src="./images/depobadajoz.jpg" alt="Deportivo vs. Badajoz" class="image_evento img">
@@ -129,134 +159,7 @@
         </script>
     </main>
 
-    <script>
 
-
-        let container = $(".prev").parent().find(".caja_eventos")[0];
-
-        $(".prev, .next").on("click", function (e) {
-            cambiarContenido(e);
-        });
-
-
-        function siguienteIndex(i, n) {
-            return (i + 1) % n;
-        }
-
-        function cambiarContenido(e) {
-            const target = e.target;
-            const container = $(target).parent().find(".caja_eventos")[0];
-            let currentIndex = parseInt($(target).parent().find(".indexActual").text());
-            const eventos = $(container).children();
-            const nElem = eventos.length;
-            // Se actualiza el indice actual
-            currentIndex = siguienteIndex(currentIndex, nElem);
-            $(target).parent().find(".indexActual").text(currentIndex);
-            // Se ocultan eventos
-            eventos.each(function () {
-                $(this).hide();
-            })
-            // mostrarSet = [];
-            // for(let i=0; i<4; i++){
-            //     mostrarSet.push(siguienteIndex(currentIndex+i, nElem));
-            // }
-            const mostrarSet = Array.from({ length: 4 }, (_, i) => siguienteIndex(currentIndex+i, nElem));
-            eventos.each(function (index) {
-                if(mostrarSet.includes(index)) $(this).show();
-            });
-
-        }
-        testimonios = document.getElementsByClassName("testimonio");
-        for (i = 0; i < testimonios.length; i++) {
-            if (i == indexTestimonio) continue;
-            testimonios[i].style.display = "none";
-        }
-
-        function updateIndex(direccion) {
-            indexTestimonio += direccion;
-            indexTestimonio = indexTestimonio < 0 ? testimonios.length - 1 : indexTestimonio;
-            indexTestimonio %= testimonios.length;
-        }
-
-        function cambiarTestimonio(direccion) {
-            updateIndex(direccion);
-            $(".testimonio").hide();
-            $(".testimonio").eq(indexTestimonio).show();
-        }
-    </script>
-
-    <script>
-
-        // let indicesActuales = new Map();
-        // let eventosMap = new Map();
-        // let nEventos = new Map();
-
-        // function init() {
-        //     const containers = document.querySelectorAll(".container_eventos");
-        //     for (const container of containers) {
-        //         const eventos = container.querySelectorAll(".evento");
-        //         const id_container = container.id;
-        //         indicesActuales.set(id_container, 0);
-        //         eventosMap.set(id_container, eventos);
-        //         nEventos.set(id_container, eventos.length);
-        //         let i = 0;
-        //         for (const evento of eventos) {
-        //             i++;
-        //             if (i <= 3) continue;
-        //             evento.style.display = "none";
-        //         }
-        //     }
-        // }
-        // window.addEventListener('load', init);
-
-        // function contarClicks(id, sentido) {
-        //     const index = indicesActuales.get(id);
-        //     const n = nEventos.get(id);
-        //     const eventos = eventosMap.get(id);
-        //     if(index+sentido<n-2 && index+sentido>-1){
-        //         indicesActuales.set(id, index + sentido);
-        //         if(sentido>0){
-        //             eventos[index].style.display = "none";
-        //             eventos[index+3].style.display = "block";
-        //         } else{
-        //             eventos[index-1].style.display = "block";
-        //             eventos[index+2].style.display = "none";
-        //         }
-        //         console.log(index);
-        //     }
-        // }
-    </script>
-    <!-- <script>
-        let nConjuntos = document.getElementsByClassName("dot");
-
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-    </script> -->
 
 </body>
 

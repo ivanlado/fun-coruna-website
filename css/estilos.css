@@ -18,6 +18,11 @@ p {
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #ECE8E5;
+    opacity: 1;
+    background-image: radial-gradient(#00b7ff 0.6000000000000001px, transparent 0.6000000000000001px), radial-gradient(#00b7ff 0.6000000000000001px, #ECE8E5 0.6000000000000001px);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
 }
 
 .container {
@@ -36,7 +41,7 @@ header {
     color: black;
     background-image: linear-gradient(180deg, rgba(27, 26, 26, 0.35), rgba(49, 49, 49, 0.35)), url('../images/beach.jpg');
     background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 92%);
 }
 
 nav {
@@ -170,7 +175,7 @@ nav a {
         display: block;
     }
 
-    .logo-nav{
+    .logo-nav {
         font-size: 2rem;
     }
 
@@ -186,6 +191,23 @@ nav a {
 
 /* Eventos */
 
+main{
+    padding-top: 40px;
+}
+
+
+.seccion-eventos{
+    background-color: var(--gris-claro);    
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+/* Parrafo de debajo del titulo de la caja la seccion de eventos */
+.seccion-eventos p{
+    padding-top: 0.5rem;
+}
+
 
 
 .container-caja-eventos {
@@ -199,36 +221,47 @@ nav a {
 
 .prev,
 .next {
-    width: 2.2%;
+    display: block;
     min-width: 40px;
-    display: contents;
-    aspect-ratio: 1;
     align-items: center;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: rgb(79 70 229);
+    color: black;
     border-width: 1px;
     border: 2px solid;
     border-radius: 50%;
-    border-color: rgb(79 70 229);
+}
+
+.prev{
+    margin-right: 20px;
+}
+
+.next{
+    margin-left: 20px;
+}
+
+.prev:hover{
+    background: linear-gradient(90deg, var(--azul-gris), var(--azul));
+    border: 0px;
+    fill: white;
+}
+
+.next:hover{
+    background: linear-gradient(270deg, var(--azul-gris), var(--azul));
+    border: 0px;
+    fill: white;
 }
 
 
+
 .caja_eventos {
-    background-color: lightgray;
-    /* float: left; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, auto));
     gap: 5em;
-    /* margin: 50px; */
-    padding: 55px;
+    padding-top: 25px;
     width: 94%;
 }
 
 
 .evento {
-    /* transition-duration: 300ms; */
     padding-bottom: 1.25rem;
     border-radius: var(--event-radius);
     background-color: white;
@@ -277,16 +310,19 @@ nav a {
     }
 }
 
+/* container imagen eventos */
 .container_imagen_eventos {
     border-radius: 0.75rem;
 }
 
+/* imagen eventos */
 .img {
     max-width: 100%;
     border-radius: var(--event-radius) var(--event-radius) 0 0;
     height: auto;
 }
 
+/* otras caracteristicas del evento */
 .container_text_evento {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -314,8 +350,6 @@ nav a {
     font-weight: bolder;
 }
 
-
-
 .footer-evento {
     display: flex;
     justify-content: space-between;
@@ -323,7 +357,6 @@ nav a {
     align-items: center;
 
 }
-
 
 .btn-reservar {
     border: none;

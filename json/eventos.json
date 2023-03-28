@@ -1,46 +1,107 @@
 {
   "eventos": [
     {
-      "nombreEvento": "Partido1",
+      "nombreEvento": "Deportivo vs. Badajoz",
+      "imagen": "./images/depobadajoz.jpg",
       "fecha": "25 abril 2022 19:00",
       "lugar": "Estadio Riazor",
       "precio": "20"
     },
     {
-      "nombreEvento": "Partido2",
+      "nombreEvento": "Deportivo vs. Celta B",
+      "imagen": "./images/deporceltab.jpg",
       "fecha": "25 abril 2022 19:00",
       "lugar": "Estadio Riazor",
       "precio": "20"
     },
     {
-      "nombreEvento": "Partido3",
+      "nombreEvento": "Deportivo vs. Mérida",
+      "imagen": "./images/depormerida.jpg",
       "fecha": "25 abril 2022 19:00",
       "lugar": "Estadio Riazor",
       "precio": "20"
     },
     {
-      "nombreEvento": "Partido4",
+      "nombreEvento": "Deportivo vs. Rayo",
+      "imagen": "./images/deporrayo.jpg",
       "fecha": "25 abril 2022 19:00",
       "lugar": "Estadio Riazor",
       "precio": "20"
     },
     {
-      "nombreEvento": "Partido5",
+      "nombreEvento": "Deportivo vs. Castilla",
+      "imagen": "./images/deporrma.jpg",
       "fecha": "25 abril 2022 19:00",
       "lugar": "Estadio Riazor",
       "precio": "20"
     },
     {
-      "nombreEvento": "Partido6",
+      "nombreEvento": "Deportivo vs. R.Ferrol",
+      "imagen": "./images/deporferrol.jpg",
       "fecha": "25 abril 2022 19:00",
       "lugar": "Estadio Riazor",
       "precio": "20"
     },
     {
-      "nombreEvento": "Partido7",
+      "nombreEvento": "Deportivo vs. Unionistas",
+      "imagen": "./images/deporunio.jpg",
+      "fecha": "30 abril 2022 19:00",
+      "lugar": "Estadio Riazor",
+      "precio": "30"
+    }
+  ],
+
+  "eventosDeportivos": [
+    {
+      "nombreEvento": "Deportivo vs. Badajoz",
+      "imagen": "./images/depobadajoz.jpg",
+      "fecha": "25 abril 2022 19:00",
+      "lugar": "Estadio Riazor",
+      "precio": "20"
+    },
+    {
+      "nombreEvento": "Deportivo vs. Celta B",
+      "imagen": "./images/deporceltab.jpg",
+      "fecha": "25 abril 2022 19:00",
+      "lugar": "Estadio Riazor",
+      "precio": "20"
+    },
+    {
+      "nombreEvento": "Deportivo vs. Mérida",
+      "imagen": "./images/depormerida.jpg",
+      "fecha": "25 abril 2022 19:00",
+      "lugar": "Estadio Riazor",
+      "precio": "20"
+    },
+    {
+      "nombreEvento": "Deportivo vs. Rayo",
+      "imagen": "./images/deporrayo.jpg",
+      "fecha": "25 abril 2022 19:00",
+      "lugar": "Estadio Riazor",
+      "precio": "20"
+    },
+    {
+      "nombreEvento": "Deportivo vs. Castilla",
+      "imagen": "./images/deporrma.jpg",
+      "fecha": "25 abril 2022 19:00",
+      "lugar": "Estadio Riazor",
+      "precio": "20"
+    },
+    {
+      "nombreEvento": "Deportivo vs. R.Ferrol",
+      "imagen": "./images/deporferrol.jpg",
+      "fecha": "25 abril 2022 19:00",
+      "lugar": "Estadio Riazor",
+      "precio": "20"
+    },
+    {
+      "nombreEvento": "Deportivo vs. Unionistas",
+      "imagen": "./images/deporunio.jpg",
       "fecha": "30 abril 2022 19:00",
       "lugar": "Estadio Riazor",
       "precio": "30"
     }
   ]
+
+
 }

@@ -75,3 +75,17 @@ new-paleta{
     background-size: 28px 28px;
     background-position: 0 0, 14px 14px;
 }
+
+.btn-std{
+    border: none;
+    background-color: var(--azul);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-std:hover{
+    background-color: var(--amarillo);
+}
