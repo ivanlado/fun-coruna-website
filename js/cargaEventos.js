@@ -7,8 +7,10 @@ function cargarEventos() {
     xhttp.onload = function () {
         if (this.readyState == 4 && this.status == 200) {
             let json = JSON.parse(this.responseText);
-            cargaEventos("eventos-hoy",json.eventos);
-            cargaEventos("eventos-deportivos",json.eventos);
+            cargaEventos("eventos-destacados",json.eventosDestacados);
+            cargaEventos("eventos-deportivos",json.eventosDeportivos);
+            cargaEventos("eventos-musicales",json.eventosMusicales);
+            cargaEventos("eventos-sociales",json.eventosSociales);
         }
     }
     xhttp.open("GET", filePath);

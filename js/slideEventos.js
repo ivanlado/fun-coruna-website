@@ -7,7 +7,9 @@ $(document).ready(function(){
 
 
 function siguienteIndex(i, n, sentido) {
-    return (i + sentido) % n;
+    let nuevoValor = i + sentido;
+    nuevoValor = nuevoValor < 0 ? n-1 : nuevoValor;
+    return nuevoValor % n;
 }
 
 function cambiarContenido(e) {
