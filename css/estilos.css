@@ -54,10 +54,6 @@ nav {
     color: var(--blanco);
 }
 
-.container-logo {
-    display: flex;
-    flex-direction: row;
-}
 
 /* Conjunto de elementos de la barra de navegacion, que formaran
 parte del menu desplegable responsivo cuando la pantalla se haga pequeña */
@@ -77,6 +73,8 @@ nav a {
 
 /* Logo de la barra de navegacion */
 .logo-nav {
+    display: block;
+    margin: 0 auto;
     font-weight: bold;
 }
 
@@ -145,12 +143,15 @@ nav a {
 
     .nav-items {
         flex-direction: column;
-        gap: 0.25rem;
-        display: none;
+        padding: 1.25rem;
+        gap: 0.5rem;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
     }
 
-    .btn-menu {
-        display: block;
+    .nav-items a:hover{
+        backdrop-filter: blur(40px);
+        font-weight: bold;
     }
 
     .logo-nav {
@@ -167,15 +168,6 @@ nav a {
         gap: 0.5rem;
     }
 
-}
-
-@media(min-width: 801px) {
-    .nav-items {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 1.5rem;
-    }
 }
 
 /* Eventos */
