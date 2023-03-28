@@ -19,10 +19,10 @@
 <body>
     <header>
         <nav class="container">
-            <a href="index.html" class="container-logo">
-                <h2 class="logo-nav">Fun Coruña</h2>
+            <div href="index.html" class="container-logo">
+                <a href="index.html" class="logo-nav">Fun Coruña</a>
                 <img src="./images/icons/menuwhite.svg" alt="Boton abrir menu responsivo" class="btn-menu">
-            </a>
+            </div>
             <div class="nav-items">
                 <a href="./conocenos.html">Sobre nosotros</a>
                 <a href="./funcionamiento.html">Como funcionamos</a>
@@ -51,9 +51,8 @@
             <h2 class="tipo_eventos" id="current-date"> Eventos destacados</h2>
             <p class="comentario_container_eventos">Estos son los eventos más destacados para los próximos días</p>
             <div class="container-caja-eventos">
-                <a class="prev" , onclick="contarClicks('eventos-hoy', -1)">
-                    <img src="./images/icons/bxs-chevron-left.svg" alt="">
-                </a>
+                <div class="indexActual" style="display: none;">0</div>
+                <img src="./images/icons/bxs-chevron-left.svg" alt="" class="prev">
                 <div class="caja_eventos">
                     <!-- <article class="evento">
                         <div class="container_imagen_evento">
@@ -70,9 +69,7 @@
                         </div>
                     </article>-->
                 </div>
-                <a class="next" , onclick="contarClicks('eventos-hoy', 1)">
-                    <img src="./images/icons/bxs-chevron-right.svg" alt="">
-                </a>
+                <img src="./images/icons/bxs-chevron-right.svg" alt="" class="next">
 
             </div>
         </section>
@@ -110,22 +107,6 @@
             </div>
         </form>
 
-        <!-- <div id="myModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close">&times;</span>
-                    <h2>Modal Header</h2>
-                </div>
-                <div class="modal-body">
-                    <p>Some text in the Modal Body</p>
-                    <p>Some other text...</p>
-                </div>
-                <div class="modal-footer">
-                    <h3>Modal Footer</h3>
-                </div>
-            </div>
-        </div> -->
-
         <script>
             let modal = document.getElementById("form-reserva");
 
@@ -147,6 +128,63 @@
             }
         </script>
     </main>
+
+    <script>
+
+
+        let container = $(".prev").parent().find(".caja_eventos")[0];
+
+        $(".prev, .next").on("click", function (e) {
+            cambiarContenido(e);
+        });
+
+
+        function siguienteIndex(i, n) {
+            return (i + 1) % n;
+        }
+
+        function cambiarContenido(e) {
+            const target = e.target;
+            const container = $(target).parent().find(".caja_eventos")[0];
+            let currentIndex = parseInt($(target).parent().find(".indexActual").text());
+            const eventos = $(container).children();
+            const nElem = eventos.length;
+            // Se actualiza el indice actual
+            currentIndex = siguienteIndex(currentIndex, nElem);
+            $(target).parent().find(".indexActual").text(currentIndex);
+            // Se ocultan eventos
+            eventos.each(function () {
+                $(this).hide();
+            })
+            // mostrarSet = [];
+            // for(let i=0; i<4; i++){
+            //     mostrarSet.push(siguienteIndex(currentIndex+i, nElem));
+            // }
+            const mostrarSet = Array.from({ length: 4 }, (_, i) => siguienteIndex(currentIndex+i, nElem));
+            eventos.each(function (index) {
+                if(mostrarSet.includes(index)) console.log(this);
+            });
+
+        }
+        testimonios = document.getElementsByClassName("testimonio");
+        for (i = 0; i < testimonios.length; i++) {
+            if (i == indexTestimonio) continue;
+            testimonios[i].style.display = "none";
+        }
+
+        function updateIndex(direccion) {
+            indexTestimonio += direccion;
+            indexTestimonio = indexTestimonio < 0 ? testimonios.length - 1 : indexTestimonio;
+            indexTestimonio %= testimonios.length;
+        }
+
+        function cambiarTestimonio(direccion) {
+            updateIndex(direccion);
+            $(".testimonio").hide();
+            $(".testimonio").eq(indexTestimonio).show();
+        }
+    </script>
+
     <script>
 
         // let indicesActuales = new Map();

@@ -22,6 +22,8 @@ function cargarEventos() {
             }
             const container = $('#eventos-hoy .caja_eventos');
             container.append(code);
+            const eventosHide = $(container).children();
+            eventosHide.filter(':gt(3)').hide();
         }
     }
     xhttp.open("GET", filePath);

@@ -79,17 +79,8 @@ nav a {
 .btn-menu {
     display: none;
     margin-left: auto;
+    padding-left: 0.75rem;
 }
-
-.open-menu {
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-
-
-
 
 /* Hero */
 
@@ -179,10 +170,8 @@ nav a {
         display: block;
     }
 
-    .logo-nav {
-        background: linear-gradient(to left, #30CFD0 0%, #330867 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    .logo-nav{
+        font-size: 2rem;
     }
 
     .hero {
@@ -228,7 +217,7 @@ nav a {
 
 .caja_eventos {
     background-color: lightgray;
-    float: left;
+    /* float: left; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, auto));
     gap: 5em;
