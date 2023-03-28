@@ -162,7 +162,7 @@
             // }
             const mostrarSet = Array.from({ length: 4 }, (_, i) => siguienteIndex(currentIndex+i, nElem));
             eventos.each(function (index) {
-                if(mostrarSet.includes(index)) console.log(this);
+                if(mostrarSet.includes(index)) $(this).show();
             });
 
         }
