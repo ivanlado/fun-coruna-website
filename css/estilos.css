@@ -113,45 +113,22 @@ nav a {
     text-align: center;
 }
 
-/* Barra del busqueda */
-.barra-busqueda {
+/* Btnes acceso rápido a eventos */
+.btns-tipos-eventos{
     display: flex;
-    text-align: center;
     align-items: center;
-    padding-top: 2rem;
-    border-radius: 40px;
-    width: 900px;
+    text-align: center;
+    flex-direction: row;
+    padding-top: 20px;
 }
 
-/* Entrada de texto de la barra de busqueda */
-.barra-busqueda input[type=text] {
-    flex: 1;
-    height: auto;
-    width: 30%;
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
-    font-size: 16px;
-
+.btns-tipos-eventos a{
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-/* Boton de buscar de la barra de busqueda */
-.barra-busqueda button[type=submit] {
-    border: none;
-    width: fit-content;
-    height: fit-content;
-    background-color: var(--azul);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-left: 10px;
-    cursor: pointer;
-}
 
-/* Boton de buscar de la barra de busqueda efecto hover */
-.barra-busqueda button[type=submit]:hover {
-    background-color: var(--amarillo);
-}
 
 /* Header responsivo */
 @media(max-width: 800px) {
@@ -181,10 +158,6 @@ nav a {
 
     .hero {
         display: none;
-    }
-
-    .barra-busqueda {
-        width: auto;
     }
 
 }
