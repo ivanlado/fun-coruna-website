@@ -7,99 +7,109 @@ h1,
 h2,
 h3,
 h4,
+blockquote,
 p {
     padding: 0;
     margin: 0;
 }
 
 /* header hero */
-
 header {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to right top, rgba(27, 26, 26, 0.55), rgba(49, 49, 49, 0.55)), url("../images/reunion.jpg");
+    background-image: linear-gradient(to right top, rgba(27, 26, 26, 0.65), rgba(49, 49, 49, 0.65)), url("../images/reunion.jpg");
     background-size: cover;
     color: var(--blanco);
 }
 
-
-
-.btn {
-    margin-top: 3rem;
-    background-color: rgb(0, 183, 255);
-    text-decoration: None;
-    color: white;
-    padding: 8px 30px;
-    border-radius: 30px;
+header div{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1.5rem 0;
 }
 
 
-/* opiniones */
 
+/* Secciones de opiniones */
 section{
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 100vh;
-    max-height: 600px;
-    background-image: linear-gradient(90deg, rgba(27, 26, 26, 0.5), rgba(49, 49, 49, 0.5) 20%, rgba(238, 233, 233, 0.4)100%), url("../images/reunion2.jpg");
     background-size: cover;
-    /* flex: 1; */
+    padding: 2rem 0;
+}
+
+#opiniones-empresas {
+    background-image: linear-gradient(90deg, rgba(27, 26, 26, 0.7), rgba(49, 49, 49, 0.7) 40%, rgba(238, 233, 233, 0.4)100%), url("../images/reunionempresa.jpg");
+}
+
+#opiniones-usuarios {
+    background-image: linear-gradient(90deg, rgba(27, 26, 26, 0.7)100%, rgba(49, 49, 49, 0.7) 40%, rgba(238, 233, 233, 0.4)), url("../images/reunion2.jpg");
+    flex-direction: row-reverse;
+}
+
+#opiniones-usuarios .presentacion{
+    text-align: right;
 }
 
 .presentacion{
     width: 35vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     color: var(--blanco);
-    padding: 20px 40px;
-    text-align: right;
+    padding: 20px 80px;
+    text-align: left;
 }
 
+/* responsibidad */
 @media (max-width: 800px){
     section{
         flex-direction: column;
         height: fit-content;
         max-height: none;
         padding-bottom: 3rem;
-        background-image: linear-gradient(180deg, rgba(27, 26, 26, 0.5), rgba(49, 49, 49, 0.5) 50%, rgba(238, 233, 233, 0.4)100%), url("../images/reunion2.jpg");
-        padding: 10px 20px;
+        padding: 40px 20px;
+        padding-bottom: 50px;
+    }
 
+    #opiniones-empresas{
+        background-image: linear-gradient(180deg, rgba(27, 26, 26, 0.7), rgba(49, 49, 49, 0.7) 50%, rgba(238, 233, 233, 0.4)100%), url("../images/reunionempresa.jpg");
+    }
+
+    #opiniones-usuarios{
+        flex-direction: column;
+        background-image: linear-gradient(180deg, rgba(27, 26, 26, 0.7), rgba(49, 49, 49, 0.7) 50%, rgba(238, 233, 233, 0.4)100%), url("../images/reunion2.jpg");
     }
 
     .presentacion{
-        width: 100vw;
-        /* padding: 10px; */
+        width: 70vw;
+        padding: 10px;
+        padding-bottom: 20px;
     }
+
+
 }
 
-@media (max-width: 1000px){
-    .presentacion{
-        width: 45vw;
-        padding: 10px 20px;
-    }
-}
-
-
-
-blockquote p{
+blockquote{
     padding-top: 1rem;
+}
+
+.presentacion p{
+    padding-top: 0.25rem;
     font-weight: bold;
 }
 
-
-.opiniones-empresas{
-}
 
 .prev, .next {
     position: absolute;
     color: var(--blanco);
     top: 50%;
+    cursor: pointer;
+    right: -20px;
 }
 
 .prev {
@@ -143,5 +153,4 @@ img {
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-
 }

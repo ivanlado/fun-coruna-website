@@ -6,34 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/testimonios.css">
     <link rel="stylesheet" href="./css/comun.css">
-    <!-- <script src="jquery-3.6.3.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="./js/testimonios.js"></script>
-    <script src="./js/cargarOpiniones.js"></script>
+
     <title>Testimonial</title>
 </head>
 
 <body>
     <header>
-        <h1 class="hero-titulo">Descubre lo que piensan de nosotros</h1>
-        <a href="#comienzo" class="btn">Ver opiniones</a>
+        <h1>Descubre lo que piensan de nosotros</h1>
+        <div>
+            <a href="#opiniones-empresas" class="btn-std">Ver opiniones empresas</a>
+            <a href="#opiniones-usuarios" class="btn-std">Ver opiniones usuarios</a>
+        </div>
     </header>
-    <main id="comienzo">
-        <section class="opiniones-empresas">
+    <main>
+        <section id="opiniones-empresas">
             <div class="presentacion">
                 <h2>Opiniones de empresas</h2>
-                <blockquote>
-                    Fun Coruña ha demostrado ser un socio invaluable para nuestra compañía. Su equipo altamente
-                    capacitado y su amplia red de contactos en la industria han sido cruciales en la creación y gestión
-                    exitosa de varios eventos clave para nuestro negocio. Su enfoque en la promoción ha garantizado una
-                    amplia participación y exposición, lo que ha llevado a una mayor visibilidad y crecimiento en
-                    nuestro mercado. En general, estamos muy satisfechos con la colaboración y esperamos seguir
-                    trabajando juntos en futuros eventos.
-                    <p>Sala Pelícano</p>
-                </blockquote>
+                <blockquote></blockquote>
+                <p></p>
             </div>
             <article class="testimonios">
-                <a class="prev" onclick="cambiarTestimonio(-1)">&#10094;</a>
+                <a class="prev">&#10094;</a>
                 <article class="testimonio">
                     <img src="./images/logoconcello.png" alt="">
                     <h3>Concello de A Coruña</h3>
@@ -61,11 +54,53 @@
                         in
                         numquam?</p>
                 </article>
-                <a class="next" onclick="cambiarTestimonio(1)">&#10095;</a>
+                <a class="next">&#10095;</a>
+            </article>
+        </section>
+        <section id="opiniones-usuarios">
+            <div class="presentacion">
+                <h2>Opiniones de usuarios</h2>
+                <blockquote></blockquote>
+                <p></p>
+            </div>
+            <article class="testimonios">
+                <a class="prev">&#10094;</a>
+                <article class="testimonio">
+                    <img src="./images/opinion3.jpg" alt="">
+                    <h3>Ines QR</h3>
+                    <p>¡Hola! Quería compartir mi experiencia con la empresa de eventos en A Coruña. Gracias a
+                        ellos, he podido enterarme de los mejores eventos sociales, culturales, musicales y
+                        deportivos de la ciudad. Lo mejor de todo es que la reserva de entradas es muy cómoda,
+                        lo que me ha permitido disfrutar de mis eventos favoritos sin preocupaciones.
+                    </p>
+                </article>
+                <article class="testimonio">
+                    <img src="./images/opinion2.jpg" alt="">
+                    <h3>Roberto Tato</h3>
+                    <p>¡Hola! Quería compartir mi experiencia con la empresa de eventos en A Coruña. Gracias a
+                        ellos, he podido enterarme de los mejores eventos sociales, culturales, musicales y
+                        deportivos de la ciudad. Lo mejor de todo es que la reserva de entradas es muy cómoda,
+                        lo que me ha permitido disfrutar de mis eventos favoritos sin preocupaciones.
+                    </p>
+                </article>
+                <article class="testimonio">
+                    <img src="./images/opinion1.jpg" alt="">
+                    <h3>Iván Lado</h3>
+                    <p>¡Hola! Quería compartir mi experiencia con la empresa de eventos en A Coruña. Gracias a
+                        ellos, he podido enterarme de los mejores eventos sociales, culturales, musicales y
+                        deportivos de la ciudad. Lo mejor de todo es que la reserva de entradas es muy cómoda,
+                        lo que me ha permitido disfrutar de mis eventos favoritos sin preocupaciones.
+                    </p>
+                </article>
+                <a class="next">&#10095;</a>
             </article>
         </section>
     </main>
-    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./js/testimonios.js"></script>
+    <script src="./js/cargarOpiniones.js"></script>
 </body>
 
 </html>

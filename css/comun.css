@@ -84,6 +84,8 @@ new-paleta{
     border-radius: 20px;
     margin-left: 10px;
     cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .btn-std:hover{
