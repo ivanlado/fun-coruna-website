@@ -1,19 +1,14 @@
-
-document.addEventListener("DOMContentLoaded", function (event) {
-    console.log("lasdjalksdshd");
-    document.getElementById("btnSubmit").addEventListener("submit", submitReserva);
-    const email = document.querySelector('input[name="email"]');
-    const regexEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
-
-    
-});
+const email = document.querySelector('input[name="email"]');
+document.getElementById("btnSubmit").addEventListener("click", submitReserva);
+const regexEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i;
 
 
-function submitReserva() {
-    console.log("submit event");
+function submitReserva(e) {
+    console.log(regexEmail.test(email.value));
     if (regexEmail.test(email.value)) {
-        console.log("lksadjasdkasd");
+        alert("Se ha enviado la petición de reserva de entradas. En breves recibirán un email para realizar el pago de las mismas.");
     } else {
-        alert("lkasjdasd");
+        alert("El email introducido no es correcto. Introduzca uno correcto");
+        e.preventDefault();
     }
 }

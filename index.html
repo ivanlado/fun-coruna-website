@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/comun.css">
     <link rel="stylesheet" href="./css/formReserva.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <!-- <script src="./js/date.js"></script> -->
-    <script src="./js/slideEventos.js"></script>
-    <script src="./js/submitForm.js"></script>
+
 </head>
 
 
@@ -76,7 +73,7 @@
         </section>
 
         <section class="seccion-eventos" id="eventos-deportivos">
-            <h2  id="current-date"> Eventos deportivos</h2>
+            <h2> Eventos deportivos</h2>
             <p>Estos son los eventos deportivos para los próximos días</p>
             <div class="container-caja-eventos">
                 <div class="indexActual" style="display: none;">0</div>
@@ -104,7 +101,7 @@
         </section>
 
         <section class="seccion-eventos" id="eventos-musicales">
-            <h2 > Eventos musicales</h2>
+            <h2> Eventos musicales</h2>email.value
             <p>Estos son los eventos musicales para los próximos días</p>
             <div class="container-caja-eventos">
                 <div class="indexActual" style="display: none;">0</div>
@@ -131,7 +128,7 @@
             </div>
         </section>
         <section class="seccion-eventos" id="eventos-sociales">
-            <h2 > Eventos sociales</h2>
+            <h2> Eventos sociales</h2>
             <p>Estos son los eventos sociales para los próximos días</p>
             <div class="container-caja-eventos">
                 <div class="indexActual" style="display: none;">0</div>
@@ -166,17 +163,17 @@
                     <h2>Formulario de reserva</h2>
                 </section>
                 <section class="form-body fondo-blanco">
-                    <label for="apellidos" >Apellidos</label>
-                    <input type="text" name="apellidos" pattern="[a-zA-ZÀ-ÿ ]{2,}" placeholder="Apellidos">
-                    <label for="nombre" >Nombre</label>
-                    <input type="text" name="nombre" pattern="[a-zA-ZÀ-ÿ ]{2,}" placeholder="Nombre">
-                    <label for="dni" >DNI</label>
-                    <input type="text" name="dni" pattern="[0-9]{8}[A-Za-z]" placeholder="12345678A">
-                    <label for="email" >Correo electrónico</label>
-                    <input type="text" name="email" placeholder="email@email.com" >
-                    <label for="ntel" >Número de teléfono</label>
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" pattern="[a-zA-ZÀ-ÿ ]{2,}" placeholder="Apellidos" required>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" pattern="[a-zA-ZÀ-ÿ ]{2,}" placeholder="Nombre" required>
+                    <label for="dni">DNI</label>
+                    <input type="text" name="dni" pattern="[0-9]{8}[A-Za-z]" placeholder="12345678A" required>
+                    <label for="email">Correo electrónico</label>
+                    <input type="text" name="email" placeholder="email@email.com">
+                    <label for="ntel">Número de teléfono</label>
                     <input type="text" name="ntel">
-                    <label for="cantidad" >Cantidad de entradas</label>
+                    <label for="cantidad">Cantidad de entradas</label>
                     <input type="number" min="1" max="10" value="1" name="cantidad">
                     <input type="checkbox" name="condiciones">He leido, y acepto las políticas de
                     privacidad y de la compañía
@@ -223,10 +220,12 @@
     </footer>
 
 
-</body>
 
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!-- <script src="./js/date.js"></script> -->
+<script src="./js/slideEventos.js"></script>
+<script src="./js/submitForm.js"></script>
 <script src="/js/cargaEventos.js"></script>
 
 </html>
-
-
