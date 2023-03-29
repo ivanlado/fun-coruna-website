@@ -14,19 +14,9 @@ p {
     overflow: hidden;
 }
 
+
+
 /* Barra de navegacion */
-
-header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 60vh;
-    color: black;
-    background-image: linear-gradient(180deg, rgba(27, 26, 26, 0.35), rgba(49, 49, 49, 0.35)), url('../images/beach.jpg');
-    background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-}
-
 nav {
     display: flex;
     gap: 2.5em;
@@ -37,13 +27,8 @@ nav {
     color: var(--blanco);
 }
 
-.container-logo {
-    display: flex;
-    flex-direction: row;
-}
 
-/* Conjunto de elementos de la barra de navegacion, que formaran
-parte del menu desplegable responsivo cuando la pantalla se haga pequeña */
+/* Conjunto de elementos de la barra de navegacion*/
 .nav-items {
     display: flex;
     flex-direction: row;
@@ -60,18 +45,18 @@ nav a {
 
 /* Logo de la barra de navegacion */
 .logo-nav {
+    display: block;
+    margin: 0 auto;
     font-weight: bold;
 }
 
-/* Boton para abrir la barra de navegacion responsiva cuando la pantalla se hace pequeña */
-.btn-menu {
-    display: none;
-    margin-left: auto;
-    padding-left: 0.75rem;
-}
+
+
+
+
 
 /* Header responsivo */
-@media(max-width: 800px) {
+@media(max-width: 900px) {
 
     header {
         justify-content: start;
@@ -82,17 +67,20 @@ nav a {
         flex-direction: column;
         gap: 0.5rem;
     }
-
+    
     .nav-items {
         flex-direction: column;
-        gap: 0.25rem;
+        padding: 1.25rem;
+        gap: 0.5rem;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+    }
+    
+    .nav-items a:hover{
+        font-weight: bold;
     }
 
-    .btn-menu {
-        display: block;
-    }
-
-    .logo-nav{
+    .logo-nav {
         font-size: 2rem;
     }
 

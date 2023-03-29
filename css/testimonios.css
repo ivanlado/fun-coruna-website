@@ -15,22 +15,71 @@ p {
 
 /* header hero */
 header {
-    height: 100vh;
     display: flex;
+    height: fit-content;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to right top, rgba(27, 26, 26, 0.65), rgba(49, 49, 49, 0.65)), url("../images/reunion.jpg");
     background-size: cover;
     color: var(--blanco);
+    padding-bottom: 20vh;
 }
 
-header div{
+.btns{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
-    padding: 1.5rem 0;
+    gap: 0.5rem;
 }
+
+header h1{
+    padding-top: 15vh;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Header responsivo */
+@media(max-width: 900px) {
+
+    header {
+        justify-content: start;
+        gap: 0.25rem;
+        padding-bottom: 4rem;
+    }
+
+    header h1{
+        padding-top: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .nav-items {
+        flex-direction: column;
+        padding: 1.25rem;
+        gap: 0.5rem;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+    }
+    
+    .nav-items a:hover{
+        font-weight: bold;
+    }
+
+    .logo-nav {
+        font-size: 2rem;
+    }
+
+    .btns{
+        flex-direction: column;
+    }
+
+}
+
+
+
 
 
 
