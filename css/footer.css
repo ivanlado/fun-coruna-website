@@ -1,0 +1,30 @@
+/* footer */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 80px 40px;
+    color: var(--blanco);
+    background: linear-gradient(180deg, var(--azul-gris), var(--azul));
+}
+
+.footer-main{
+    max-width: 30vw;
+}
+
+.footer-description{
+    padding-top: 0.75rem;
+}
+
+.copy{
+    padding-top: 0.5rem;
+}
+
+footer a{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--blanco);
+}
