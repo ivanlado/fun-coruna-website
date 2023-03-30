@@ -7,8 +7,8 @@ btnEmpresas.addEventListener("click", cambiarModalidadPagoEmpresas);
 btnUsuarios.addEventListener("click", cambiarModalidadPagoUsuarios);
 
 // Textos de año/mes en las tarifas
-const textosMensualAnualEmpresas = document.querySelectorAll("#planes_organizadores .modalidad-pago");
-const textosMensualAnualUsuarios = document.querySelectorAll("#planes_usuarios .modalidad-pago");
+const textosMensualAnualEmpresas = document.querySelectorAll("#planes-organizadores .modalidad-pago");
+const textosMensualAnualUsuarios = document.querySelectorAll("#planes-usuarios .modalidad-pago");
 
 // Cte para los precios
 const cte = 9;
