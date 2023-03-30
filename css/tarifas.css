@@ -14,6 +14,7 @@ p {
     margin-bottom: 0;
 }
 
+
 :root {
     --c-blue-900: #081030;
     --c-blue-800: #111b40;
@@ -25,133 +26,99 @@ p {
     --c-green-400: #4ade80;
 }
 
-/* hero */
-.hero {
+/* header hero */
+header {
     display: flex;
-    text-align: center;
-    align-items: center;
-    height: 100vh;
-    /* opacity: 0.757; */
-
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-
-.hero_organizadores {
-    background-size: cover;
-    background-image: linear-gradient(to right top,
-            rgba(27, 26, 26, 0.55),
-            rgba(49, 49, 49, 0.55)), url('../images/workgr.jpg');
-}
-
-.hero_usuarios {
-    background-image: linear-gradient(to right top,
-            rgba(27, 26, 26, 0.55),
-            rgba(49, 49, 49, 0.55)), url('../images/gentegr.jpg');
-    background-size: cover;
-    max-height: 100%;
-}
-
-.hero_content {
-    height: 100%;
-    width: 100%;
-    display: flex;
+    height: fit-content;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin: auto;
-    height: 100%;
-    color: white;
-    text-align: center;
     align-items: center;
-    margin: 0 auto;
+    background-image: linear-gradient(0deg, rgba(27, 26, 26, 0.9), rgba(49, 49, 49, 0.5)), url("../images/decidegra.jpg");
+    background-size: cover;
+    color: var(--blanco);
+    padding-bottom: 20vh;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+header h1 {
+    padding-top: 15vh;
+    padding-bottom: 1.5rem;
+    text-align: center;
 }
 
 
+/* Header responsivo */
+@media(max-width: 900px) {
 
-.btn_verprecios {
-    display: inline-block;
-    justify-self: center;
-    background-color: rgb(0, 183, 255);
-    text-decoration: None;
-    color: white;
-    padding: 13px 30px;
-    border-radius: 30px;
-    /* z-index: 5; */
-}
-
-@media (max-width: 1200px) {
-    .hero {
-        flex-direction: column;
+    header {
+        justify-content: start;
+        gap: 0.25rem;
+        padding-bottom: 4rem;
     }
-}
 
+    header h1 {
+        padding-top: 2rem;
+    }
+
+}
 
 /* precios */
 
-.seccion_planes {
-    display: grid;
+/* container grande */
+.seccion-planes {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: stretch;
     padding: 5rem 5rem;
     gap: 1em;
 }
 
-.container_planes {
+/* contenedor de los planes, hay que considerar la responsividad */
+.container-planes {
     display: flex;
     flex-direction: row;
     gap: 2em;
-    align-items: center;
-    justify-content: center;
-    /* background-color: var(--c-blue-900); */
-    color: var(--c-blue-100);
-    /* padding: 20px; */
+    align-items: stretch;
+    justify-content: stretch;
 }
 
-#planes_organizadores {}
+@media(max-width: 1000px) {
 
-#planes_usuarios {
-    background-color: var(--azul);
-}
-
-.container_plan {
-    padding: 5px;
-    border-radius: 16px;
+    .container-planes{
+        flex-direction: column;
+    }
 
 }
 
-.container_plan:hover {
-    transition: all .2s ease-in-out;
-    background-image: linear-gradient(0, var(--naranja)20%, var(--azul-claro) 50%, var(--azul)80%, var(--azul-gris)100%);
-
-    transform: scale(1.01);
-}
-
-.plan {
-    aspect-ratio: 4 / 6;
+/* Plan */
+.container-planes > article {
     background-color: var(--gris-claro);
     border-radius: 16px;
     max-width: 375px;
     min-width: 250px;
-    max-height: 45vh;
     padding: 1rem;
     display: flex;
     color: black;
     flex-direction: column;
     box-shadow: 0 15px 45px 0 rgba(#000, 0.15);
+    border: 5px solid transparent;
     position: relative;
 }
 
-.plan:hover {
-    transform: translate(0, -2px);
-    box-shadow: 0 0 30px #00000089;
+.container-planes article:hover {
+    transform: translatkue(0, -2px);
+    box-shadow: 0 0 30px #00000089; 
+    transition: all .2s ease-in-out;
+    background: linear-gradient(var(--gris-claro), var(--gris-claro)) padding-box,
+        var(--gradiente-azul-naranja) border-box;
+    border-radius: var(--radius);
 }
 
 
@@ -171,18 +138,19 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
-.centimos{
+.centimos {
     font-size: 2rem;
 }
 
-.modalidad-pago{
+.modalidad-pago {
     font-size: small;
     background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.titulo_plan {
+/* Titulo del plan */
+.container-planes > article > h2 {
     padding-top: 18px;
     font-size: 1.25rem;
     font-weight: 600;
@@ -191,18 +159,17 @@ p {
     color: black;
 }
 
-.descripcion_plan {
+/* Descripcion del plan */
+.container-planes > article > p {
     padding-top: 5px;
     font-size: 1rem;
     text-align: center;
 }
 
+/* Container características del plan */
 .features {
-    /* display: grid; */
     padding-top: 5px;
     text-align: left;
-    /* margin-top: 20px; */
-    /* grid-template-rows: repeat(auto-fill, 40px); */
 }
 
 .feature {
@@ -210,7 +177,7 @@ p {
     padding-top: 5px;
 }
 
-.icono_feature {
+.container-planes > article img {
     padding-top: 2px;
     max-height: 24px;
     max-width: 100%;
@@ -219,53 +186,31 @@ p {
 }
 
 /* opinion */
-
-
-
-.container_opinion_wrap {
-    aspect-ratio: 20/4;
-    max-width: 800px;
-    margin: auto;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 5px;
-    border-radius: 2rem;
-    background: linear-gradient(180deg, var(--naranja)20%, var(--azul-claro) 50%, var(--azul)80%, var(--azul-gris)100%);
-
-
-}
-
-.container_opinion {
-    aspect-ratio: 20/4;
+.container-opinion {
     max-width: 800px;
     align-items: center;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 100%;
-    background-color: rgb(243 244 246);
     border-radius: 2rem;
-    /* border: solid 6px transparent;
-    border-radius: 80px;
-    background-image: linear-gradient(white, white), linear-gradient(#f00, #3020ff);
-    background-origin: border-box;
-    background-clip: content-box, border-box; */
+    border: 5px solid transparent;
+    background: linear-gradient(var(--blanco), var(--blanco)) padding-box,
+        var(--gradiente-azul-naranja-opuesto) border-box;
+    border-radius: var(--radius);
 }
 
-.foto_cliente {
+.container-opinion > img {
     padding: 5%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     text-align: center;
     align-items: center;
     border-radius: 50%;
 }
 
-
-/* The switch - the box around the slider */
-
+/* Btn anual mensual */
 .btn-mensual-anual {
     display: flex;
     align-items: center;
@@ -273,7 +218,7 @@ p {
     gap: 0.75rem;
 }
 
-.switch {
+.btn-mensual-anual label {
     position: relative;
     display: inline-block;
     width: 60px;
@@ -281,7 +226,7 @@ p {
 }
 
 /* Quitamos el check del checkbox original */
-.switch input {
+.btn-mensual-anual label input {
     opacity: 0;
     width: 0;
     height: 0;

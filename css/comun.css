@@ -9,7 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-main-paleta{
+main-paleta {
     --blanco: #fff;
     --blanco-roto: #ECE8E5;
     --azul: #00b7ff;
@@ -22,7 +22,7 @@ main-paleta{
     --azul-gris: #384F5F;
 }
 
-new-paleta{
+new-paleta {
     --gris-claro2: #8AA2AA;
     --amarillo2: #E7BF4C;
 }
@@ -64,19 +64,21 @@ new-paleta{
     --bg-color-oscuro: #3EA6A2;
     --bg-color-oscuro-2: #494E56;
     --bg-color-oscuro-2-claro: var(--gris-claro);
+
+
+    --gradiente-azul-naranja: linear-gradient(0, var(--amarillo)20%, var(--azul-claro) 50%, var(--azul)80%, var(--azul-gris)100%);
+    --gradiente-azul-naranja-opuesto: linear-gradient(180deg, var(--amarillo)20%, var(--azul-claro) 50%, var(--azul)80%, var(--azul-gris)100%);
+    --radius: 20px
 }
 
-.fondo-blanco{
-    color: var(--azul-gris);
-    background-color: var(--fondo);
-    background-color: #fff;
+.fondo-blanco {
+    background-color: #e5e5EC;
     opacity: 1;
-    background-image: radial-gradient(#ECB561 0.7000000000000001px, transparent 0.7000000000000001px), radial-gradient(#ECB561 0.7000000000000001px, #fff 0.7000000000000001px);
-    background-size: 28px 28px;
-    background-position: 0 0, 14px 14px;
+    background-image: radial-gradient(#ECB561 0.8px, #e5e5EC 0.8px);
+    background-size: 16px 16px;
 }
 
-.btn-std{
+.btn-std {
     border: none;
     background-color: var(--azul);
     color: white;
@@ -88,6 +90,6 @@ new-paleta{
     font-weight: bold;
 }
 
-.btn-std:hover{
+.btn-std:hover {
     background-color: var(--amarillo);
 }
