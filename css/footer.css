@@ -28,3 +28,16 @@ footer a{
     text-decoration: none;
     color: var(--blanco);
 }
+
+@media (max-width: 900px) {
+    footer{
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 30px 15px;
+    }
+    .footer-main{
+        max-width: 90vw;
+    }
+}

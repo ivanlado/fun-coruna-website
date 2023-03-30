@@ -114,6 +114,15 @@ header {
     color: var(--blanco);
 }
 
+.container-informacion video{
+    display: block;
+    margin: auto;
+    max-height: 90%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
 /* Stats */
 
 .stats {
@@ -146,4 +155,9 @@ header {
     font-size: medium;
     padding-top: 0.5rem;
     padding-bottom: 0.25rem;
+}
+
+/* Ponemos los iconos blancos */
+.stats img{
+    filter: invert(1);
 }
