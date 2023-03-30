@@ -15,41 +15,40 @@ p {
     margin-bottom: 0;
 }
 
-/* Hero */
-
-.hero {
+/* Header */
+header {
     display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     height: 100vh;
     background-image: linear-gradient(rgba(27, 26, 26, 0.75), rgba(49, 49, 49, 0.4)), url('../images/chinchin.jpg');
     background-size: cover;
-    /* clip-path: polygon(100% 0, 100% 98%, 50% 100%, 0 98%, 0 0); */
 }
 
-.hero_content {
+.hero {
     padding-left: 20%;
     padding-right: 20%;
     margin: auto;
     color: white;
 }
 
-.btn_conocenos {
-    display: inline-block;
-    justify-self: center;
-    background-color: rgb(0, 183, 255);
-    text-decoration: None;
-    color: white;
-    padding: 13px 30px;
-    border-radius: 30px;
-    /* z-index: 5; */
+/* Hero responsivo */
+@media(max-width: 900px) {
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 10vh;
+    }
 }
 
+.hero p{
+    margin-bottom: 1rem;
+}
+
+
 /* Informacion */
-
-
-
-.container_informacion {
+.container-informacion {
     text-align: center;
     align-items: center;
     padding-top: 1.5rem;
@@ -63,8 +62,9 @@ p {
     /* height: 40vh; */
 }
 
-@media (max-width: 800px) {
-    .container_informacion {
+/* Containers informacion responsivos */
+@media (max-width: 900px) {
+    .container-informacion {
         grid-template-columns: 1fr;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -75,21 +75,20 @@ p {
         order: 1;
     }
 
-    .container_texto {
+    .container-texto {
         order: 2;
     }
 }
 
-.container_texto {
+.container-texto {
     text-align: left;
 }
 
 
 
-.img-informacion {
+.container-informacion img {
+    display: block;
     margin: auto;
-    /* margin-left: auto;
-    margin-right: auto; */
     max-height: 90%;
     max-width: 100%;
     object-fit: cover;
@@ -97,12 +96,12 @@ p {
 }
 
 
-.nombre_seccion {
+.container-informacion h2 {
     color: grey;
     font-size: 1rem;
 }
 
-.container_par {
+.container-par {
     background-color: #e5e5f780;
     opacity: 0.8;
     background-image: radial-gradient(var(--azul) 0.6px, transparent 0.8px);
@@ -110,23 +109,26 @@ p {
     background-position: 0 0, 16px 16px;
 }
 
-.container_impar {
+.container-impar {
     background-color: var(--azul-osc);
     color: var(--blanco);
 }
 
+/* Stats */
+
 .stats {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0 auto;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     gap: 2em;
-    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
 }
 
-.stat {
+.stats article {
     border: 1px dashed #fff;
     border-radius: 5px;
     padding: 20px;
@@ -140,7 +142,7 @@ p {
     height: 125px;
 }
 
-.stat h5{
+.stat h5 {
     font-size: medium;
     padding-top: 0.5rem;
     padding-bottom: 0.25rem;
