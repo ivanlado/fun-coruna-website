@@ -1,34 +1,42 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-    const btnEmpresas = document.getElementById("btn-mensual-anual-empresas");
-    const btnUsuarios = document.getElementById("btn-mensual-anual-usuarios");
-    btnEmpresas.addEventListener("click", cambiarModalidadPagoEmpresas);
-    btnUsuarios.addEventListener("click", cambiarModalidadPagoUsuarios);
+// Botones de mensual anual
+const btnEmpresas = document.getElementById("btn-mensual-anual-empresas");
+const btnUsuarios = document.getElementById("btn-mensual-anual-usuarios");
 
-    const textosMensualAnual = document.querySelectorAll("#planes_organizadores .modalidad-pago");
+// Se añaden eventos
+btnEmpresas.addEventListener("click", cambiarModalidadPagoEmpresas);
+btnUsuarios.addEventListener("click", cambiarModalidadPagoUsuarios);
 
-    const cte = 9;
+// Textos de año/mes en las tarifas
+const textosMensualAnualEmpresas = document.querySelectorAll("#planes_organizadores .modalidad-pago");
+const textosMensualAnualUsuarios = document.querySelectorAll("#planes_usuarios .modalidad-pago");
 
-    function cambiarModalidadPagoEmpresas() {
-        // If the checkbox is checked, display the output text
-        if (btnEmpresas.checked == true) {
-            //Anual
-            for (e of textosMensualAnual){
-                e.innerText = "/año";
-                const precio = parseInt(e.parentNode.firstChild.textContent);
-                e.parentNode.firstChild.textContent = Math.trunc(precio*cte);
-            }
-        } else {
-            for (e of textosMensualAnual){
-                e.innerText = "/mes";
-                const precio = parseInt(e.parentNode.firstChild.textContent);
-                e.parentNode.firstChild.textContent = Math.trunc(precio/cte);
-            }
+// Cte para los precios
+const cte = 9;
+
+function cambiarModalidadPagoEmpresas() {
+    cambioModalidad(textosMensualAnualEmpresas, btnEmpresas);
+}
+
+function cambiarModalidadPagoUsuarios() {
+    cambioModalidad(textosMensualAnualUsuarios, btnUsuarios);
+}
+
+function cambioModalidad(textos, btn){
+    if (btn.checked == true) {
+        //Anual
+        for (e of textos) {
+            e.innerText = "/año";
+            const precio = parseInt(e.parentNode.firstChild.textContent);
+            e.parentNode.firstChild.textContent = Math.trunc(precio * cte);
+        }
+    } else {
+        // Mensual
+        for (e of textos) {
+            e.innerText = "/mes";
+            const precio = parseInt(e.parentNode.firstChild.textContent);
+            e.parentNode.firstChild.textContent = Math.trunc(precio / cte);
         }
     }
-    
-    function cambiarModalidadPagoUsuarios() {
-        // console.log("cambio");
-    }
-});
+}
 
 
