@@ -73,6 +73,8 @@ header {
     padding: 1.5rem;
     border-radius: var(--radius);
     box-shadow: 0 0 20px var(--blanco);
+    flex: 1;
+
 } 
 
 .icon {
