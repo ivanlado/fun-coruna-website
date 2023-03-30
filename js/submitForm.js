@@ -4,7 +4,6 @@ const regexEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-
 
 
 function submitReserva(e) {
-    console.log(regexEmail.test(email.value));
     if (regexEmail.test(email.value)) {
         alert("Se ha enviado la petición de reserva de entradas. En breves recibirán un email para realizar el pago de las mismas.");
     } else {
