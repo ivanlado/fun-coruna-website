@@ -1,11 +1,8 @@
-$(document).ready(function(){
-    $(".prev, .next").on("click", function (e) {
-        cambiarContenido(e);
-    });
-
+$(".prev, .next").on("click", function (e) {
+    cambiarContenido(e);
 });
 
-
+// Devuelve el nuevo indice
 function siguienteIndex(i, n, sentido) {
     let nuevoValor = i + sentido;
     nuevoValor = nuevoValor < 0 ? n-1 : nuevoValor;

@@ -20,7 +20,7 @@
     justify-content: center;
 }
 
-/* Modal Content */
+/* Container modal*/
 .container-reserva {
     position: relative;
     margin: auto;
@@ -35,13 +35,12 @@
     animation-duration: 1s;
 }
 
-/* Add Animation */
+/* Animacion */
 @-webkit-keyframes animacionInicio {
     from {
         left: -100px;
         opacity: 0
     }
-
     to {
         left: 0;
         opacity: 1
@@ -53,7 +52,6 @@
         left: -100px;
         opacity: 0
     }
-
     to {
         left: 0;
         opacity: 1

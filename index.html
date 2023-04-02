@@ -174,32 +174,12 @@
                     <input type="text" name="ntel">
                     <label for="cantidad">Cantidad de entradas</label>
                     <input type="number" min="1" max="10" value="1" name="cantidad">
-                    <input type="checkbox" name="condiciones">He leido, y acepto las políticas de
-                    privacidad y de la compañía
+                   
                     <input type="submit" value="Reservar" name="reservar" id="btnSubmit">
                 </section>
             </div>
         </form>
 
-        <script>
-            let modal = document.getElementById("form-reserva");
-
-            let btnCerrar = document.getElementsByClassName("close")[0];
-
-            function reservar(btn) {
-                modal.style.display = "flex";
-            }
-
-            btnCerrar.onclick = function () {
-                modal.style.display = "none";
-            }
-
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
     </main>
 
     <footer>
@@ -225,5 +205,6 @@
 <script src="./js/slideEventos.js"></script>
 <script src="./js/submitForm.js"></script>
 <script src="/js/cargaEventos.js"></script>
+<script src="/js/form.js"></script>
 
 </html>

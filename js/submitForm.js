@@ -1,4 +1,5 @@
 const email = document.querySelector('input[name="email"]');
+
 document.getElementById("btnSubmit").addEventListener("click", submitReserva);
 const regexEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i;
 

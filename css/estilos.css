@@ -246,41 +246,6 @@ main {
     aspect-ratio: 2;
 }
 
-.fade-left {
-    opacity: 0;
-    animation: fadeLeft 1s forwards;
-}
-
-@keyframes fadeLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-
-.fade-right {
-    opacity: 0;
-    animation: fadeRight 1s forwards;
-}
-
-@keyframes fadeRight {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
 /* container imagen eventos */
 .container_imagen_eventos {
     border-radius: 0.75rem;
