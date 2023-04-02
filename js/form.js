@@ -3,6 +3,7 @@ let btnCerrar = document.getElementsByClassName("close")[0];
 
 // Si se clica el btn de reservar se muestra el formulario
 function reservar(btn) {
+    formulario.reset();
     formulario.style.display = "flex";
 }
 
