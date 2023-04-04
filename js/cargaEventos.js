@@ -1,5 +1,5 @@
 const fileName = "eventos.json";
-const filePath = "http://127.0.0.1:5500/json/" + fileName;
+const filePath = "json/" + fileName;
 const numberVisiblesItems = 4;
 
 function cargarEventos() {

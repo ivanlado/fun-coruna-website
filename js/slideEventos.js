@@ -27,7 +27,6 @@ function cambiarContenido(e) {
     })
     // Array auxiliar para ver conseguir los indices de los elementos a mostrar
     const mostrarSet = Array.from({ length: 4 }, (_, j) => siguienteIndex(j + i - 1, n, 1));
-    console.log(mostrarSet);
     // Se muestran los eventos oportunos
     eventos.each(function (index) {
         if (mostrarSet.includes(index)) $(this).show();

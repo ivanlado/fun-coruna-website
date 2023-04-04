@@ -1,5 +1,5 @@
 const fileName = "opiniones.xml";
-const filePath = "http://127.0.0.1:5500/xml/" + fileName;
+const filePath = "xml/" + fileName;
 
 $(document).ready(function(){
     // Empresas
