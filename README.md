@@ -1,4 +1,3 @@
-# funCoruna
 # Fun Coruña
 
 **Fun Coruña** is a fictional web project developed for the *Web Development* course in the Computer Engineering degree program. It is a platform that promotes and organizes social, cultural, musical, and sports events in the city of A Coruña.
