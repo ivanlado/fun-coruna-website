@@ -8,6 +8,13 @@ The platform allows:
 
 There are **dedicated service sections and pricing plans** for each type of user (individuals and companies), ensuring that both casual attendees and professional event organizers can find value in the platform.
 
+## 🔧 Technologies Used
+
+- **HTML5** & **CSS3** – Structure and styling of the website
+- **JavaScript** – Dynamic behaviors and interactions
+- **jQuery** – Simplified DOM manipulation and event handling
+- **AJAX** – Asynchronous data loading
+- **JSON & XML** – Data formats used for event information
 
 ## 🌐 Live Demo
 [Click here to view the live demo](https://ivanlado.github.io/fun-coruna-website/)
